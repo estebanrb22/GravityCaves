@@ -17,7 +17,14 @@ var jump_inverted_count = 0
 var jump_interval = 0
 var jump_inverted_interval = 0
 var gravity_changes = 0
+@onready var pivote: Node2D = $Pivote
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_tree: AnimationTree = $AnimationPlayer/AnimationTree
+@onready var playback = animation_tree.get("parameters/playback")
+
+func _ready() -> void:
+	animation_tree.active = true
 	
 func _physics_process(delta):
 	var move_input = Input.get_axis("move_left", "move_right")
@@ -27,6 +34,10 @@ func _physics_process(delta):
 	else: plus = 1
 
 	velocity.x = move_toward(velocity.x, move_input * speed * plus, acceleration * delta)
+	
+	#animación
+	if move_input != 0:
+		pivote.scale.x = sign(move_input)
 	
 	if not is_on_floor() and not is_gravity_changed:
 		velocity.y += gravy_gravity * delta
@@ -87,3 +98,9 @@ func _physics_process(delta):
 	
 	
 	move_and_slide()	
+	
+	#más animación a
+	if abs(velocity.x) > 7:
+		playback.travel("run")
+	else:
+		playback.travel("IDLE")
