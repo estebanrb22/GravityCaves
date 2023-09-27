@@ -128,7 +128,7 @@ texture = ExtResource("1_l2bb5")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vfkc8")
 
-[node name="ambient1" type="Node2D"]
+[node name="floor" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(0.5, 0.5)

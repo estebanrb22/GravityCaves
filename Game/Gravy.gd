@@ -62,7 +62,7 @@ func _physics_process(delta):
 				is_gravity_changed = false
 				gravy_gravity *= -1
 				velocity.y = jump_speed
-				
+	
 	if is_on_floor():
 		jump_interval = 0
 		jump_inverted_interval = 0
@@ -104,3 +104,9 @@ func _physics_process(delta):
 		playback.travel("run")
 	else:
 		playback.travel("IDLE")
+		
+	# Ajustar la escala del personaje si la gravedad está invertida
+	if is_gravity_changed and is_on_ceiling():
+		$Pivote.scale.y = -1  # Invierte verticalmente el personaje
+	elif is_on_floor():
+		$Pivote.scale.y = 1  # Restaura la escala vertical normal del personaje
