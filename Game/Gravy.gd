@@ -17,6 +17,7 @@ var jump_inverted_count = 0
 var jump_interval = 0
 var jump_inverted_interval = 0
 var gravity_changes = 0
+
 @onready var pivote: Node2D = $Pivote
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
