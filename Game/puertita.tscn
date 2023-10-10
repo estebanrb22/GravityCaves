@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bla32pffeqplq"]
+
+[ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="1_eixum"]
+[ext_resource type="Script" path="res://Game/puertita.gd" id="1_wv6g2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52pas"]
+size = Vector2(60, 99)
+
+[node name="Puertita" type="Area2D"]
+script = ExtResource("1_wv6g2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -17)
+scale = Vector2(1.81176, 1.8)
+texture = ExtResource("1_eixum")
+hframes = 12
+vframes = 12
+frame = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_52pas")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -51.0
+offset_top = -93.0
+offset_right = 51.0
+offset_bottom = -67.0
+theme_override_font_sizes/font_size = 0
+text = "(Press Space)"
+horizontal_alignment = 1
