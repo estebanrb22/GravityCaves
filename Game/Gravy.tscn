@@ -244,4 +244,3 @@ tree_root = SubResource("AnimationNodeStateMachine_8f8gu")
 anim_player = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
