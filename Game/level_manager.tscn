@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhyr8g02cftim"]
+[gd_scene load_steps=6 format=3 uid="uid://dhyr8g02cftim"]
 
 [ext_resource type="Script" path="res://Game/level_manager.gd" id="1_j1bfv"]
 [ext_resource type="PackedScene" uid="uid://bah1xl7upyprw" path="res://Game/Tutorial.tscn" id="2_8f1lm"]
 [ext_resource type="PackedScene" uid="uid://burkikcwqhjb" path="res://Game/nivel_1.tscn" id="3_od2j6"]
 [ext_resource type="PackedScene" uid="uid://2thrjt2xxdg8" path="res://Game/nivel_2.tscn" id="4_c5ecs"]
+[ext_resource type="PackedScene" uid="uid://kp2e7haxulaj" path="res://Game/nivel_3.tscn" id="5_kyado"]
 
 [node name="LevelManager" type="Node"]
 script = ExtResource("1_j1bfv")
-levels = Array[PackedScene]([ExtResource("2_8f1lm"), ExtResource("3_od2j6"), ExtResource("4_c5ecs")])
+levels = Array[PackedScene]([ExtResource("2_8f1lm"), ExtResource("3_od2j6"), ExtResource("4_c5ecs"), ExtResource("5_kyado")])

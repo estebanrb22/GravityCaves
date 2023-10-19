@@ -1,5 +1,11 @@
 extends CharacterBody2D
 
+var max_health = 1
+var health = max_health
+
+var count_colision = 0
+var object_collision = 0
+
 var speed = 90
 var plus = 1
 var extra = 1.5
@@ -26,8 +32,15 @@ var gravity_changes = 0
 
 func _ready() -> void:
 	animation_tree.active = true
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("pinchos"):
+		LevelManager.go_to_level(3)
 	
 func _physics_process(delta):
+	
+	
+	
 	var move_input = Input.get_axis("move_left", "move_right")
 	var shift = Input.is_action_pressed("Shift")
 	
@@ -93,10 +106,6 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_up") and jump_inverted_interval < jump_limit and jump_inverted_count == 1 and is_gravity_changed:
 		jump_inverted_interval += 1
 		velocity.y = -jump_speed
-		
-	
-								
-	
 	
 	move_and_slide()	
 	
@@ -107,7 +116,7 @@ func _physics_process(delta):
 		playback.travel("IDLE")
 		
 	# Ajustar la escala del personaje si la gravedad está invertida
-	if is_gravity_changed and is_on_ceiling():
+	if is_gravity_changed:
 		$Pivote.scale.y = -1  # Invierte verticalmente el personaje
-	elif is_on_floor():
+	else:
 		$Pivote.scale.y = 1  # Restaura la escala vertical normal del personaje

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cyw07i8371itd"]
+[gd_scene load_steps=35 format=3 uid="uid://cyw07i8371itd"]
 
 [ext_resource type="Script" path="res://Game/Gravy.gd" id="1_t0hxk"]
 [ext_resource type="Texture2D" uid="uid://cn1u6gepf2rvj" path="res://assets/Characters/satyr-Sheet.png" id="2_px7hh"]
@@ -218,6 +218,9 @@ states/run_start/position = Vector2(497, -31)
 transitions = ["IDLE", "run_start", SubResource("AnimationNodeStateMachineTransition_4s6ly"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_7x503"), "run", "IDLE", SubResource("AnimationNodeStateMachineTransition_tfvnr"), "IDLE", "jump_start", SubResource("AnimationNodeStateMachineTransition_4rydo"), "run", "jump_start", SubResource("AnimationNodeStateMachineTransition_uc3ig"), "jump_start", "jump", SubResource("AnimationNodeStateMachineTransition_f0myi"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_uph3h"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_g5xiy"), "land", "IDLE", SubResource("AnimationNodeStateMachineTransition_a5sal"), "land", "run_start", SubResource("AnimationNodeStateMachineTransition_o1fiw"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_6sxev"), "IDLE", "fall", SubResource("AnimationNodeStateMachineTransition_bjvft"), "run_start", "run", SubResource("AnimationNodeStateMachineTransition_xhj05")]
 graph_offset = Vector2(96, -45)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jk3d"]
+size = Vector2(12, 17)
+
 [node name="Gravy" type="CharacterBody2D"]
 script = ExtResource("1_t0hxk")
 metadata/_edit_group_ = true
@@ -244,3 +247,11 @@ tree_root = SubResource("AnimationNodeStateMachine_8f8gu")
 anim_player = NodePath("..")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_8jk3d")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -4,6 +4,7 @@ extends Node
 @export var credits: PackedScene
 @export var levels: Array[PackedScene]
 var current_level = 0
+
 func go_to_level(index):
 	if index < levels.size():
 		var level = levels[index]
