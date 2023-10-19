@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-var max_health = 1
-var health = max_health
+var max_lives = 10
+var count_lives = max_lives
 
-var count_colision = 0
-var object_collision = 0
+var posx = 0
+var posy = 0
 
 var speed = 90
 var plus = 1
@@ -24,22 +24,41 @@ var jump_interval = 0
 var jump_inverted_interval = 0
 var gravity_changes = 0
 
+@onready var label_life: Label = $CanvasLayer/HUD/Label
+
 @onready var pivote: Node2D = $Pivote
 
+@onready var actual_level: Node2D = get_parent()
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var animation_tree: AnimationTree = $AnimationPlayer/AnimationTree
 @onready var playback = animation_tree.get("parameters/playback")
 
 func _ready() -> void:
+	label_life.text = str(count_lives)
+	posx = position.x
+	posy = position.y
 	animation_tree.active = true
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("pinchos"):
-		LevelManager.go_to_level(3)
+		take_damage()
+		
+	
+func take_damage():
+	count_lives = max(0, count_lives - 1)
+	if count_lives == 0:
+		LevelManager.start_game()
+	else:
+		label_life.text = str(count_lives)
+		is_gravity_changed = false
+		gravity_changes = 0
+		gravy_gravity = 400
+		position.x = posx
+		position.y = posy
+		velocity.x = 0 
+		velocity.y = 0
 	
 func _physics_process(delta):
-	
-	
 	
 	var move_input = Input.get_axis("move_left", "move_right")
 	var shift = Input.is_action_pressed("Shift")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://cyw07i8371itd"]
+[gd_scene load_steps=36 format=3 uid="uid://cyw07i8371itd"]
 
 [ext_resource type="Script" path="res://Game/Gravy.gd" id="1_t0hxk"]
 [ext_resource type="Texture2D" uid="uid://cn1u6gepf2rvj" path="res://assets/Characters/satyr-Sheet.png" id="2_px7hh"]
+[ext_resource type="PackedScene" uid="uid://b0idljs505y5f" path="res://Game/hud.tscn" id="3_5nt1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0k534"]
 size = Vector2(10, 15)
@@ -219,7 +220,7 @@ transitions = ["IDLE", "run_start", SubResource("AnimationNodeStateMachineTransi
 graph_offset = Vector2(96, -45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jk3d"]
-size = Vector2(12, 17)
+size = Vector2(10, 15)
 
 [node name="Gravy" type="CharacterBody2D"]
 script = ExtResource("1_t0hxk")
@@ -252,6 +253,11 @@ anim_player = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 0.5)
+scale = Vector2(1.05, 1.05)
 shape = SubResource("RectangleShape2D_8jk3d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_5nt1f")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

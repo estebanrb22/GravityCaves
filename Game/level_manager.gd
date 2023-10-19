@@ -18,6 +18,9 @@ func start_game():
 func next_level():
 	go_to_level(current_level + 1)
 	
+func reset_level():
+	go_to_level(current_level)
+	
 #func go_to_main_menu():
 #	current_level = 0
 #	if main_menu:
