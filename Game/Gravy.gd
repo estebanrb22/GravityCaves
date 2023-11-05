@@ -127,15 +127,16 @@ func _physics_process(delta):
 		velocity.y = -jump_speed
 	
 	move_and_slide()	
-	
-	#más animación a
-	if abs(velocity.x) > 7:
-		playback.travel("run")
-	else:
-		playback.travel("IDLE")
-		
+	#más animación 
 	# Ajustar la escala del personaje si la gravedad está invertida
 	if is_gravity_changed:
 		$Pivote.scale.y = -1  # Invierte verticalmente el personaje
 	else:
 		$Pivote.scale.y = 1  # Restaura la escala vertical normal del personaje
+		
+	#OTRAS ANIMACIONES
+	if abs(velocity.x)==0 and abs(velocity.y) == 0:
+		playback.travel("IDLE")
+		
+		
+		
