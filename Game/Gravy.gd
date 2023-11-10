@@ -67,23 +67,23 @@ func _physics_process(delta):
 	else: plus = 1
 
 	velocity.x = move_toward(velocity.x, move_input * speed * plus, acceleration * delta)
-	
+	var just_jump = Input.is_action_just_pressed("move_up")
 	#animación
 	if move_input != 0:
 		pivote.scale.x = sign(move_input)
 	
 	if not is_on_floor() and not is_gravity_changed:
 		velocity.y += gravy_gravity * delta
-		if Input.is_action_just_pressed("move_up") and jump_count == 1:
+		if just_jump and jump_count == 1:
 			jump_count += 1
 	
 	if not is_on_ceiling() and is_gravity_changed:
 		velocity.y += gravy_gravity * delta
-		if Input.is_action_just_pressed("move_up") and jump_inverted_count == 1:
+		if just_jump and jump_inverted_count == 1:
 			jump_inverted_count += 1
 			
 	if not is_on_floor() and not is_on_ceiling() and (jump_count==2 or jump_inverted_count==2):
-		if Input.is_action_just_pressed("move_up"):
+		if just_jump:
 			gravity_changes += 1
 			if not is_gravity_changed and gravity_changes == 1:
 				jump_inverted_count += 1
@@ -103,7 +103,7 @@ func _physics_process(delta):
 		jump_inverted_count = 0
 		if not is_gravity_changed:
 			gravity_changes = 0
-		if Input.is_action_just_pressed("move_up"):
+		if just_jump:
 			velocity.y = jump_speed_floor
 			jump_count += 1
 	
@@ -114,7 +114,7 @@ func _physics_process(delta):
 		jump_inverted_count = 0
 		if is_gravity_changed:
 			gravity_changes = 0
-		if Input.is_action_just_pressed("move_up"):
+		if just_jump:
 			velocity.y = jump_speed_floor * -1
 			jump_inverted_count += 1
 			
@@ -126,35 +126,33 @@ func _physics_process(delta):
 		jump_inverted_interval += 1
 		velocity.y = -jump_speed
 	
-	move_and_slide()	
 	#más animación 
-	# Ajustar la escala del personaje si la gravedad está invertida
+
+	#OTRAS ANIMACIONES
+	if just_jump:
+		if gravity_changes==1:
+			playback.travel("bolita")
+		else:
+			playback.travel("jump_start")
+	elif abs(velocity.x)==0 and abs(velocity.y) == 0:
+		playback.travel("IDLE")
+	else:
+		if velocity.y > 0:
+			if is_on_floor():
+				playback.travel("land")
+			else:
+				playback.travel("fall")
+		elif move_input:
+			if shift:
+				playback.travel("run")
+			else:
+				playback.travel("walk_start")
+	#Ajustar la escala del personaje si la gravedad está invertida
 	if is_gravity_changed:
 		$Pivote.scale.y = -1  # Invierte verticalmente el personaje
 	else:
 		$Pivote.scale.y = 1  # Restaura la escala vertical normal del personaje
-
-	#OTRAS ANIMACIONES
-	if abs(velocity.x)==0 and abs(velocity.y) == 0:
-		playback.travel("IDLE")
-	else:
-		if (jump_count == 2 or jump_inverted_count==2):
-			if Input.is_action_just_pressed("move_up"):
-				playback.travel("inicio_bolita")
-		else:
-			if Input.is_action_pressed("move_up"):
-				playback.travel("jump_start")
-			elif velocity.y > 0:
-				if is_on_floor():
-					playback.travel("land")
-				else:
-					playback.travel("fall")
-			elif move_input:
-				if shift:
-					playback.travel("run")
-				else:
-					playback.travel("walk_start")
-					
-					
+			
+	move_and_slide()				
 					
 					
