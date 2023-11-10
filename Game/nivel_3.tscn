@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://kp2e7haxulaj"]
+[gd_scene load_steps=10 format=3 uid="uid://kp2e7haxulaj"]
 
+[ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_1sn64"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="1_81efb"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="1_jiona"]
 [ext_resource type="Script" path="res://Game/tilemap.gd" id="2_juf2i"]
+[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_n886e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_be1qw"]
 texture = ExtResource("1_81efb")
@@ -61,6 +63,13 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_k87jn")
 
 [node name="Nivel_3" type="Node2D"]
+
+[node name="Background1" parent="." instance=ExtResource("1_1sn64")]
+position = Vector2(-103, 175)
+
+[node name="Puertita" parent="." instance=ExtResource("2_n886e")]
+position = Vector2(484, 53)
+scale = Vector2(0.3, 0.3)
 
 [node name="TM" type="TileMap" parent="."]
 scale = Vector2(0.7, 0.7)

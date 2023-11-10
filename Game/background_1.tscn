@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccxiw7qpffke"]
+
+[ext_resource type="Texture2D" uid="uid://dsadxykd1erad" path="res://assets/Cosas varias/Fantasy Caves/background1.png" id="1_6vuwh"]
+[ext_resource type="Texture2D" uid="uid://c1n2yvdcui0dp" path="res://assets/Cosas varias/Fantasy Caves/background2.png" id="2_klmoo"]
+[ext_resource type="Texture2D" uid="uid://dvu8eh3jxosxv" path="res://assets/Cosas varias/Fantasy Caves/background3.png" id="3_6hbjd"]
+
+[node name="Background1" type="Sprite2D"]
+position = Vector2(-107, 98)
+texture = ExtResource("1_6vuwh")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(960, -1)
+texture = ExtResource("1_6vuwh")
+
+[node name="Background3" type="Sprite2D" parent="."]
+position = Vector2(-4, -4)
+texture = ExtResource("2_klmoo")
+
+[node name="Background4" type="Sprite2D" parent="Background3"]
+position = Vector2(953, 8)
+texture = ExtResource("2_klmoo")
+
+[node name="Background4" type="Sprite2D" parent="."]
+position = Vector2(-1, -9)
+texture = ExtResource("3_6hbjd")
+
+[node name="Background4" type="Sprite2D" parent="Background4"]
+position = Vector2(946, 4)
+texture = ExtResource("3_6hbjd")

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ibv78ehuadlc"]
+
+[node name="Camera2D" type="Camera2D"]
+offset = Vector2(240, 135)
+zoom = Vector2(0.8, 0.8)

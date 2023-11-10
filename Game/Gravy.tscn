@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cyw07i8371itd"]
+[gd_scene load_steps=56 format=3 uid="uid://cyw07i8371itd"]
 
 [ext_resource type="Script" path="res://Game/Gravy.gd" id="1_t0hxk"]
 [ext_resource type="Texture2D" uid="uid://qrf3j0gjto42" path="res://assets/Characters/New Gravy Sheet.png" id="2_h8nka"]
@@ -73,6 +73,38 @@ tracks/0/keys = {
 "values": [22, 23, 24]
 }
 
+[sub_resource type="Animation" id="Animation_e36nq"]
+resource_name = "fin bolita"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.000225574, 0.1, 0.200165),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 7, 6]
+}
+
+[sub_resource type="Animation" id="Animation_as6hj"]
+resource_name = "inicio bolita"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
 [sub_resource type="Animation" id="Animation_fqsqg"]
 resource_name = "jump"
 length = 0.5
@@ -109,7 +141,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_3n50u"]
 resource_name = "land"
 length = 0.5
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -123,9 +154,9 @@ tracks/0/keys = {
 "values": [24, 11, 12, 9]
 }
 
-[sub_resource type="Animation" id="Animation_8aek6"]
+[sub_resource type="Animation" id="Animation_bnxla"]
 resource_name = "run"
-length = 0.3
+length = 0.2
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -134,7 +165,24 @@ tracks/0/path = NodePath("Pivote/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [13, 14, 15, 16]
+}
+
+[sub_resource type="Animation" id="Animation_8aek6"]
+resource_name = "run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivote/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [11, 12]
@@ -156,38 +204,6 @@ tracks/0/keys = {
 "values": [9, 10]
 }
 
-[sub_resource type="Animation" id="Animation_e36nq"]
-resource_name = "fin bolita"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pivote/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.000225574, 0.1, 0.200165),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [8, 7, 6]
-}
-
-[sub_resource type="Animation" id="Animation_as6hj"]
-resource_name = "inicio bolita"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pivote/Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7gvls"]
 _data = {
 "IDLE": SubResource("Animation_ugpae"),
@@ -199,8 +215,9 @@ _data = {
 "jump": SubResource("Animation_fqsqg"),
 "jump_start": SubResource("Animation_r8ucm"),
 "land": SubResource("Animation_3n50u"),
-"run": SubResource("Animation_8aek6"),
-"run_start": SubResource("Animation_lfdkq")
+"run": SubResource("Animation_bnxla"),
+"walk": SubResource("Animation_8aek6"),
+"walk_start": SubResource("Animation_lfdkq")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7l4ot"]
@@ -213,10 +230,10 @@ animation = &"bolita"
 animation = &"fall"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n2ck2"]
-animation = &"fin bolita"
+animation = &"fin_bolita"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6ilex"]
-animation = &"inicio bolita"
+animation = &"inicio_bolita"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_txb63"]
 animation = &"jump"
@@ -227,15 +244,19 @@ animation = &"jump_start"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5ytss"]
 animation = &"land"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uq2ai"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0g6he"]
 animation = &"run"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uq2ai"]
+animation = &"walk"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mcjcg"]
-animation = &"run_start"
+animation = &"walk_start"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4s6ly"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7x503"]
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tfvnr"]
 
@@ -245,15 +266,11 @@ animation = &"run_start"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f0myi"]
 switch_mode = 2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uph3h"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g5xiy"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a5sal"]
-switch_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o1fiw"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6sxev"]
 
@@ -261,9 +278,9 @@ switch_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xhj05"]
 switch_mode = 2
+advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vq72m"]
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jhb8d"]
 switch_mode = 2
@@ -271,13 +288,31 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tnvox"]
 switch_mode = 2
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_422cj"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xfyee"]
-advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6yui2"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_17mtx"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yt5wh"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oci8q"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1itkg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ul5gi"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s144o"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t3oqy"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_50x1k"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8f8gu"]
 states/IDLE/node = SubResource("AnimationNodeAnimation_7l4ot")
@@ -295,13 +330,15 @@ states/jump/position = Vector2(449, 240)
 states/jump_start/node = SubResource("AnimationNodeAnimation_1l0xr")
 states/jump_start/position = Vector2(279, 189)
 states/land/node = SubResource("AnimationNodeAnimation_5ytss")
-states/land/position = Vector2(732, 116)
-states/run/node = SubResource("AnimationNodeAnimation_uq2ai")
-states/run/position = Vector2(665, 2)
-states/run_start/node = SubResource("AnimationNodeAnimation_mcjcg")
-states/run_start/position = Vector2(497, -31)
-transitions = ["IDLE", "run_start", SubResource("AnimationNodeStateMachineTransition_4s6ly"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_7x503"), "run", "IDLE", SubResource("AnimationNodeStateMachineTransition_tfvnr"), "IDLE", "jump_start", SubResource("AnimationNodeStateMachineTransition_4rydo"), "run", "jump_start", SubResource("AnimationNodeStateMachineTransition_uc3ig"), "jump_start", "jump", SubResource("AnimationNodeStateMachineTransition_f0myi"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_uph3h"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_g5xiy"), "land", "IDLE", SubResource("AnimationNodeStateMachineTransition_a5sal"), "land", "run_start", SubResource("AnimationNodeStateMachineTransition_o1fiw"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_6sxev"), "IDLE", "fall", SubResource("AnimationNodeStateMachineTransition_bjvft"), "run_start", "run", SubResource("AnimationNodeStateMachineTransition_xhj05"), "jump", "inicio_bolita", SubResource("AnimationNodeStateMachineTransition_vq72m"), "inicio_bolita", "bolita", SubResource("AnimationNodeStateMachineTransition_jhb8d"), "fin_bolita", "land", SubResource("AnimationNodeStateMachineTransition_tnvox"), "bolita", "fin_bolita", SubResource("AnimationNodeStateMachineTransition_422cj"), "fall", "inicio_bolita", SubResource("AnimationNodeStateMachineTransition_xfyee")]
-graph_offset = Vector2(-17, -74)
+states/land/position = Vector2(729, 116)
+states/run/node = SubResource("AnimationNodeAnimation_0g6he")
+states/run/position = Vector2(1013.24, -59.8148)
+states/walk/node = SubResource("AnimationNodeAnimation_uq2ai")
+states/walk/position = Vector2(665, 2)
+states/walk_start/node = SubResource("AnimationNodeAnimation_mcjcg")
+states/walk_start/position = Vector2(497, -31)
+transitions = ["IDLE", "walk_start", SubResource("AnimationNodeStateMachineTransition_4s6ly"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_7x503"), "walk", "IDLE", SubResource("AnimationNodeStateMachineTransition_tfvnr"), "IDLE", "jump_start", SubResource("AnimationNodeStateMachineTransition_4rydo"), "walk", "jump_start", SubResource("AnimationNodeStateMachineTransition_uc3ig"), "jump_start", "jump", SubResource("AnimationNodeStateMachineTransition_f0myi"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_uph3h"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_g5xiy"), "walk", "fall", SubResource("AnimationNodeStateMachineTransition_6sxev"), "IDLE", "fall", SubResource("AnimationNodeStateMachineTransition_bjvft"), "walk_start", "walk", SubResource("AnimationNodeStateMachineTransition_xhj05"), "jump", "inicio_bolita", SubResource("AnimationNodeStateMachineTransition_vq72m"), "inicio_bolita", "bolita", SubResource("AnimationNodeStateMachineTransition_jhb8d"), "fin_bolita", "land", SubResource("AnimationNodeStateMachineTransition_tnvox"), "bolita", "fin_bolita", SubResource("AnimationNodeStateMachineTransition_422cj"), "fall", "inicio_bolita", SubResource("AnimationNodeStateMachineTransition_xfyee"), "land", "IDLE", SubResource("AnimationNodeStateMachineTransition_6yui2"), "land", "walk_start", SubResource("AnimationNodeStateMachineTransition_17mtx"), "run", "IDLE", SubResource("AnimationNodeStateMachineTransition_yt5wh"), "walk", "run", SubResource("AnimationNodeStateMachineTransition_oci8q"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_1itkg"), "run", "jump_start", SubResource("AnimationNodeStateMachineTransition_ul5gi"), "run", "walk", SubResource("AnimationNodeStateMachineTransition_s144o"), "land", "jump_start", SubResource("AnimationNodeStateMachineTransition_t3oqy"), "land", "inicio_bolita", SubResource("AnimationNodeStateMachineTransition_50x1k")]
+graph_offset = Vector2(132.237, -27.8148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jk3d"]
 size = Vector2(10, 15)

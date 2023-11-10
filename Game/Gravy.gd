@@ -82,7 +82,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("move_up") and jump_inverted_count == 1:
 			jump_inverted_count += 1
 			
-	if not is_on_floor() and not is_on_ceiling():
+	if not is_on_floor() and not is_on_ceiling() and (jump_count==2 or jump_inverted_count==2):
 		if Input.is_action_just_pressed("move_up"):
 			gravity_changes += 1
 			if not is_gravity_changed and gravity_changes == 1:
@@ -133,10 +133,28 @@ func _physics_process(delta):
 		$Pivote.scale.y = -1  # Invierte verticalmente el personaje
 	else:
 		$Pivote.scale.y = 1  # Restaura la escala vertical normal del personaje
-		
+
 	#OTRAS ANIMACIONES
 	if abs(velocity.x)==0 and abs(velocity.y) == 0:
 		playback.travel("IDLE")
-		
-		
-		
+	else:
+		if (jump_count == 2 or jump_inverted_count==2):
+			if Input.is_action_just_pressed("move_up"):
+				playback.travel("inicio_bolita")
+		else:
+			if Input.is_action_pressed("move_up"):
+				playback.travel("jump_start")
+			elif velocity.y > 0:
+				if is_on_floor():
+					playback.travel("land")
+				else:
+					playback.travel("fall")
+			elif move_input:
+				if shift:
+					playback.travel("run")
+				else:
+					playback.travel("walk_start")
+					
+					
+					
+					
