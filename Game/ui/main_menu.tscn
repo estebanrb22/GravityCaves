@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg8r2ummsyk63"]
+
+[ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_0411e"]
+[ext_resource type="Texture2D" uid="uid://b4c8repjm1vc6" path="res://assets/Menú Principal/Gravity Caves Logo Final.png" id="2_atxwb"]
+[ext_resource type="Texture2D" uid="uid://bx1lo70681byw" path="res://assets/Menú Principal/Botón Jugar.png" id="3_kjctb"]
+[ext_resource type="Texture2D" uid="uid://dacd5fqrfij3o" path="res://assets/Menú Principal/Botón Opciones.png" id="4_1g1w3"]
+[ext_resource type="Texture2D" uid="uid://cpqsdunswygb5" path="res://assets/Menú Principal/Botón Créditos.png" id="5_d6agp"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -118.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="0" type="Sprite2D" parent="."]
+position = Vector2(192, 108)
+texture = ExtResource("1_0411e")
+
+[node name="GravityCavesLogoFinal" type="Sprite2D" parent="."]
+position = Vector2(191, 52)
+scale = Vector2(0.196786, 0.265)
+texture = ExtResource("2_atxwb")
+
+[node name="BotónJugar" type="Sprite2D" parent="."]
+position = Vector2(193, 99)
+scale = Vector2(0.269031, 0.298177)
+texture = ExtResource("3_kjctb")
+
+[node name="BotónOpciones" type="Sprite2D" parent="."]
+position = Vector2(193, 144)
+scale = Vector2(0.260012, 0.271727)
+texture = ExtResource("4_1g1w3")
+
+[node name="BotónCréditos" type="Sprite2D" parent="."]
+position = Vector2(193, 189)
+scale = Vector2(0.258297, 0.258303)
+texture = ExtResource("5_d6agp")
