@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cyw07i8371itd"]
+[gd_scene load_steps=54 format=3 uid="uid://cyw07i8371itd"]
 
 [ext_resource type="Script" path="res://Game/Gravy.gd" id="1_t0hxk"]
 [ext_resource type="Texture2D" uid="uid://qrf3j0gjto42" path="res://assets/Characters/New Gravy Sheet.png" id="2_h8nka"]
@@ -291,6 +291,8 @@ switch_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3od1h"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8f8gu"]
 states/IDLE/node = SubResource("AnimationNodeAnimation_7l4ot")
 states/IDLE/position = Vector2(279, 2)
@@ -312,8 +314,8 @@ states/walk/node = SubResource("AnimationNodeAnimation_uq2ai")
 states/walk/position = Vector2(665, 2)
 states/walk_start/node = SubResource("AnimationNodeAnimation_mcjcg")
 states/walk_start/position = Vector2(497, -31)
-transitions = ["IDLE", "walk_start", SubResource("AnimationNodeStateMachineTransition_4s6ly"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_7x503"), "walk", "IDLE", SubResource("AnimationNodeStateMachineTransition_tfvnr"), "IDLE", "jump_start", SubResource("AnimationNodeStateMachineTransition_4rydo"), "walk", "jump_start", SubResource("AnimationNodeStateMachineTransition_uc3ig"), "jump_start", "jump", SubResource("AnimationNodeStateMachineTransition_f0myi"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_uph3h"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_g5xiy"), "walk", "fall", SubResource("AnimationNodeStateMachineTransition_6sxev"), "IDLE", "fall", SubResource("AnimationNodeStateMachineTransition_bjvft"), "walk_start", "walk", SubResource("AnimationNodeStateMachineTransition_xhj05"), "jump", "bolita", SubResource("AnimationNodeStateMachineTransition_vq72m"), "fin_bolita", "land", SubResource("AnimationNodeStateMachineTransition_tnvox"), "fall", "bolita", SubResource("AnimationNodeStateMachineTransition_xfyee"), "land", "IDLE", SubResource("AnimationNodeStateMachineTransition_6yui2"), "land", "walk_start", SubResource("AnimationNodeStateMachineTransition_17mtx"), "run", "IDLE", SubResource("AnimationNodeStateMachineTransition_yt5wh"), "walk", "run", SubResource("AnimationNodeStateMachineTransition_oci8q"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_1itkg"), "run", "jump_start", SubResource("AnimationNodeStateMachineTransition_ul5gi"), "run", "walk", SubResource("AnimationNodeStateMachineTransition_s144o"), "land", "jump_start", SubResource("AnimationNodeStateMachineTransition_t3oqy"), "land", "bolita", SubResource("AnimationNodeStateMachineTransition_50x1k"), "bolita", "fin_bolita", SubResource("AnimationNodeStateMachineTransition_i1ut8")]
-graph_offset = Vector2(100.237, -48.8148)
+transitions = ["IDLE", "walk_start", SubResource("AnimationNodeStateMachineTransition_4s6ly"), "Start", "IDLE", SubResource("AnimationNodeStateMachineTransition_7x503"), "walk", "IDLE", SubResource("AnimationNodeStateMachineTransition_tfvnr"), "IDLE", "jump_start", SubResource("AnimationNodeStateMachineTransition_4rydo"), "walk", "jump_start", SubResource("AnimationNodeStateMachineTransition_uc3ig"), "jump_start", "jump", SubResource("AnimationNodeStateMachineTransition_f0myi"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_uph3h"), "fall", "land", SubResource("AnimationNodeStateMachineTransition_g5xiy"), "walk", "fall", SubResource("AnimationNodeStateMachineTransition_6sxev"), "IDLE", "fall", SubResource("AnimationNodeStateMachineTransition_bjvft"), "walk_start", "walk", SubResource("AnimationNodeStateMachineTransition_xhj05"), "jump", "bolita", SubResource("AnimationNodeStateMachineTransition_vq72m"), "fin_bolita", "land", SubResource("AnimationNodeStateMachineTransition_tnvox"), "fall", "bolita", SubResource("AnimationNodeStateMachineTransition_xfyee"), "land", "IDLE", SubResource("AnimationNodeStateMachineTransition_6yui2"), "land", "walk_start", SubResource("AnimationNodeStateMachineTransition_17mtx"), "run", "IDLE", SubResource("AnimationNodeStateMachineTransition_yt5wh"), "walk", "run", SubResource("AnimationNodeStateMachineTransition_oci8q"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_1itkg"), "run", "jump_start", SubResource("AnimationNodeStateMachineTransition_ul5gi"), "run", "walk", SubResource("AnimationNodeStateMachineTransition_s144o"), "land", "jump_start", SubResource("AnimationNodeStateMachineTransition_t3oqy"), "land", "bolita", SubResource("AnimationNodeStateMachineTransition_50x1k"), "bolita", "fin_bolita", SubResource("AnimationNodeStateMachineTransition_i1ut8"), "jump_start", "bolita", SubResource("AnimationNodeStateMachineTransition_3od1h")]
+graph_offset = Vector2(-27.763, -168.815)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jk3d"]
 size = Vector2(10, 15)
