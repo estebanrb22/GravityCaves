@@ -9,7 +9,7 @@ extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationPlayer/AnimationTree
 @onready var playback = animation_tree.get("parameters/playback")
 
-var max_lives = 10
+var max_lives = 100000
 var count_lives = max_lives
 
 var posx = 0
@@ -32,6 +32,7 @@ var gravity_changes = 0
 var gravity_just_changed = false
 var velocity_fall = 0
 
+var push = 50.0
 
 func _ready() -> void:
 	$Pivote.scale.y = 1
@@ -161,3 +162,8 @@ func _physics_process(delta):
 		else:
 			velocity.y = jump_speed
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			var rigidbody = c.get_collider()
+			c.get_collider().apply_central_impulse(-c.get_normal() * push)

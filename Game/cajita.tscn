@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dybq24pjv437y"]
+
+[ext_resource type="Texture2D" uid="uid://buvja0ru87yib" path="res://assets/Cajita asset/Cajita.png" id="1_khgcf"]
+[ext_resource type="Script" path="res://Game/cajita.gd" id="1_v73kg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5v0x"]
+size = Vector2(22, 22)
+
+[node name="Cajita" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 7
+mass = 1.5
+gravity_scale = 0.5
+lock_rotation = true
+linear_damp = -1.0
+angular_damp_mode = 1
+script = ExtResource("1_v73kg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r5v0x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("1_khgcf")

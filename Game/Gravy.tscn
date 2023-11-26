@@ -320,7 +320,9 @@ graph_offset = Vector2(-27.763, -168.815)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8jk3d"]
 size = Vector2(10, 15)
 
-[node name="Gravy" type="CharacterBody2D"]
+[node name="Gravy" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_t0hxk")
 metadata/_edit_group_ = true
 
