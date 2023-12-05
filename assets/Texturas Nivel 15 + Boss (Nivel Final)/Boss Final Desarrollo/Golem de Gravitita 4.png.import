@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ft4tf8bdek01"
+path="res://.godot/imported/Golem de Gravitita 4.png-e04ec3fba22bae9f7c6d4754d6a9a37c.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/Texturas Nivel 15 + Boss (Nivel Final)/Boss Final Desarrollo/Golem de Gravitita 4.png"
+dest_files=["res://.godot/imported/Golem de Gravitita 4.png-e04ec3fba22bae9f7c6d4754d6a9a37c.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="0" type="Sprite2D" parent="."]
+[node name="Fondo Menú Principal" type="Sprite2D" parent="."]
 position = Vector2(192, 108)
 texture = ExtResource("1_0411e")
 
