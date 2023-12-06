@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg8r2ummsyk63"]
+[gd_scene load_steps=8 format=3 uid="uid://bg8r2ummsyk63"]
 
 [ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_0411e"]
+[ext_resource type="Script" path="res://Game/ui/main_menu.gd" id="1_b3eio"]
 [ext_resource type="Texture2D" uid="uid://b4c8repjm1vc6" path="res://assets/Menú Principal/Gravity Caves Logo Final.png" id="2_atxwb"]
 [ext_resource type="Texture2D" uid="uid://bx1lo70681byw" path="res://assets/Menú Principal/Botón Jugar.png" id="3_kjctb"]
 [ext_resource type="Texture2D" uid="uid://dacd5fqrfij3o" path="res://assets/Menú Principal/Botón Opciones.png" id="4_1g1w3"]
 [ext_resource type="Texture2D" uid="uid://cpqsdunswygb5" path="res://assets/Menú Principal/Botón Créditos.png" id="5_d6agp"]
+[ext_resource type="Texture2D" uid="uid://gkblxncuojxi" path="res://assets/Menú Principal/Botón Salida Frame 1.png" id="6_7v6el"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -12,27 +14,63 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b3eio")
 
 [node name="Fondo Menú Principal" type="Sprite2D" parent="."]
-position = Vector2(192, 108)
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
 texture = ExtResource("1_0411e")
 
-[node name="GravityCavesLogoFinal" type="Sprite2D" parent="."]
-position = Vector2(191, 52)
-scale = Vector2(0.196786, 0.265)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_bottom = 80
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = -40
+alignment = 1
+
+[node name="Título del Juego" type="TextureRect" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
 texture = ExtResource("2_atxwb")
 
-[node name="BotónJugar" type="Sprite2D" parent="."]
-position = Vector2(193, 99)
-scale = Vector2(0.269031, 0.298177)
-texture = ExtResource("3_kjctb")
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+alignment = 1
 
-[node name="BotónOpciones" type="Sprite2D" parent="."]
-position = Vector2(193, 144)
-scale = Vector2(0.260012, 0.271727)
-texture = ExtResource("4_1g1w3")
+[node name="Botón de Jugar" type="TextureButton" parent="MarginContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_kjctb")
+stretch_mode = 5
 
-[node name="BotónCréditos" type="Sprite2D" parent="."]
-position = Vector2(193, 189)
-scale = Vector2(0.258297, 0.258303)
-texture = ExtResource("5_d6agp")
+[node name="Botón de Opciones" type="TextureButton" parent="MarginContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_1g1w3")
+stretch_mode = 5
+
+[node name="Botón de Créditos" type="TextureButton" parent="MarginContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_d6agp")
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_bottom = 130
+
+[node name="Botón de Salir" type="TextureButton" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("6_7v6el")
+ignore_texture_size = true

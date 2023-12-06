@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpmga5q4jh2su"]
+
+[ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_5tlij"]
+
+[node name="Menú de Opciones" type="MarginContainer"]
+offset_right = 384.0
+offset_bottom = 216.0
+
+[node name="Fondo Menú de Opciones" type="Sprite2D" parent="."]
+position = Vector2(192, 108)
+texture = ExtResource("1_5tlij")
