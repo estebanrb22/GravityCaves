@@ -1,10 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://bah1xl7upyprw"]
+[gd_scene load_steps=18 format=3 uid="uid://bah1xl7upyprw"]
 
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="1_aot3b"]
 [ext_resource type="Texture2D" uid="uid://cmfldudyj2lqw" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/sky.png" id="1_sbqcq"]
 [ext_resource type="Texture2D" uid="uid://b1lnc0lluj56f" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/tileset.png" id="2_0nxln"]
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_obory"]
 [ext_resource type="Texture2D" uid="uid://b0syltu46gwba" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/clouds.png" id="2_wpchr"]
+[ext_resource type="Texture2D" uid="uid://bseuiegiun1h4" path="res://assets/Naturaleza/Sol.png" id="6_g0mdv"]
+[ext_resource type="Texture2D" uid="uid://dw0qmrsgl44dc" path="res://assets/Naturaleza/Arbusto Pixel Art.png" id="7_w1p7o"]
+[ext_resource type="Texture2D" uid="uid://dne4q618l2atk" path="res://assets/Naturaleza/Árbol 1.png" id="8_vlbsv"]
+[ext_resource type="Texture2D" uid="uid://dfbxlmo121v5y" path="res://assets/Naturaleza/Árbol 3.png" id="9_q6xkx"]
+[ext_resource type="Texture2D" uid="uid://bxdt4vavexh4v" path="res://assets/Naturaleza/Árbol 2.png" id="10_hg27w"]
+[ext_resource type="Texture2D" uid="uid://ci8co8sgali5q" path="res://assets/Naturaleza/Árbol 4.png" id="11_u4ioc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_men2b"]
 texture = ExtResource("1_sbqcq")
@@ -2206,6 +2212,7 @@ position = Vector2(407, -7)
 texture = ExtResource("2_wpchr")
 
 [node name="Pastito" type="TileMap" parent="."]
+z_index = 4
 scale = Vector2(0.7, 0.7)
 tile_set = SubResource("TileSet_gkwr3")
 format = 2
@@ -2217,3 +2224,44 @@ scale = Vector2(0.4, 0.4)
 
 [node name="Gravy" parent="." instance=ExtResource("1_aot3b")]
 position = Vector2(27, 125)
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(362, 92)
+scale = Vector2(0.1125, 0.112188)
+texture = ExtResource("6_g0mdv")
+
+[node name="Arbusto 1" type="Sprite2D" parent="."]
+position = Vector2(-74, 152)
+scale = Vector2(0.00666667, 0.0075)
+texture = ExtResource("7_w1p7o")
+
+[node name="Árbol1" type="Sprite2D" parent="."]
+position = Vector2(-86, 120)
+scale = Vector2(1.75, 1.8125)
+texture = ExtResource("8_vlbsv")
+
+[node name="Árbol3" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-9.75, 112.5)
+scale = Vector2(1.7439, 1.8125)
+texture = ExtResource("9_q6xkx")
+
+[node name="Arbusto 2" type="Sprite2D" parent="."]
+position = Vector2(-23, 157)
+scale = Vector2(0.00666667, 0.0075)
+texture = ExtResource("7_w1p7o")
+
+[node name="Árbol2" type="Sprite2D" parent="."]
+position = Vector2(53, 123)
+scale = Vector2(1.76064, 1.82292)
+texture = ExtResource("10_hg27w")
+
+[node name="Árbol4" type="Sprite2D" parent="."]
+position = Vector2(-169, 114)
+scale = Vector2(1.73404, 1.8125)
+texture = ExtResource("11_u4ioc")
+
+[node name="Arbusto 3" type="Sprite2D" parent="."]
+position = Vector2(-141, 154)
+scale = Vector2(0.00666667, 0.0075)
+texture = ExtResource("7_w1p7o")
