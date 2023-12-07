@@ -3747,7 +3747,7 @@ format = 2
 
 [node name="Camera2D2" type="Camera2D" parent="."]
 offset = Vector2(240, 135)
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="Gravy" parent="." instance=ExtResource("5_0bun8")]

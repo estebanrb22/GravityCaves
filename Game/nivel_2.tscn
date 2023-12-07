@@ -6379,6 +6379,7 @@ position = Vector2(447, 173)
 scale = Vector2(0.4, 0.4)
 
 [node name="Camera2D" parent="." instance=ExtResource("3_nkwv1")]
+zoom = Vector2(4, 4)
 
 [node name="Gravy" parent="." instance=ExtResource("3_soksf")]
 position = Vector2(26, 130)

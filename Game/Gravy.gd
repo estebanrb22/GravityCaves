@@ -46,18 +46,7 @@ func _on_area_2d_body_entered(body):
 		take_damage()
 		
 func take_damage():
-	count_lives = max(0, count_lives - 1)
-	if count_lives == 0:
-		LevelManager.start_game()
-	else:
-		label_life.text = str(count_lives)
-		is_gravity_changed = false
-		gravity_changes = 0
-		gravy_gravity = 400
-		position.x = posx
-		position.y = posy
-		velocity.x = 0 
-		velocity.y = 0
+	LevelManager.reset_level()
 		
 func _physics_process(delta):
 	
