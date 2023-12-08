@@ -4,14 +4,26 @@
 [ext_resource type="Texture2D" uid="uid://dyb551g78q0jm" path="res://assets/Menú Créditos/Menú de Créditos Final.png" id="2_ybi4v"]
 
 [node name="Pantalla de Créditos" type="MarginContainer"]
-offset_right = 384.0
-offset_bottom = 216.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Fondo Menú de Créditos" type="Sprite2D" parent="."]
-position = Vector2(192, 108)
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
 texture = ExtResource("1_kb3ob")
 
-[node name="MenúDeCréditosFinal" type="Sprite2D" parent="."]
-position = Vector2(189, 115)
-scale = Vector2(0.402885, 0.410326)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1560, 920)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_ybi4v")

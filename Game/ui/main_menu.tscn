@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg8r2ummsyk63"]
+[gd_scene load_steps=9 format=3 uid="uid://bg8r2ummsyk63"]
 
 [ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_0411e"]
 [ext_resource type="Script" path="res://Game/ui/main_menu.gd" id="1_b3eio"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dacd5fqrfij3o" path="res://assets/Menú Principal/Botón Opciones.png" id="4_1g1w3"]
 [ext_resource type="Texture2D" uid="uid://cpqsdunswygb5" path="res://assets/Menú Principal/Botón Créditos.png" id="5_d6agp"]
 [ext_resource type="Texture2D" uid="uid://gkblxncuojxi" path="res://assets/Menú Principal/Botón Salida Frame 1.png" id="6_7v6el"]
+[ext_resource type="Texture2D" uid="uid://ob1awex2cyry" path="res://assets/Menú Principal/Botón Salida Frame 2.png" id="8_m2idr"]
 
 [node name="MainMenu" type="MarginContainer"]
 anchors_preset = 15
@@ -65,12 +66,15 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
-theme_override_constants/margin_left = 130
-theme_override_constants/margin_bottom = 130
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_bottom = 100
 
 [node name="Botón de Salir" type="TextureButton" parent="MarginContainer/MarginContainer"]
+custom_minimum_size = Vector2(232, 272)
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 4
+size_flags_vertical = 8
 texture_normal = ExtResource("6_7v6el")
+texture_pressed = ExtResource("8_m2idr")
 ignore_texture_size = true
+stretch_mode = 0
