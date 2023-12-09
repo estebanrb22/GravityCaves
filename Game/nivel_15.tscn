@@ -3067,6 +3067,7 @@ texture = ExtResource("4_5gjaa")
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
@@ -6037,6 +6038,27 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 5
 layer_2/tile_data = PackedInt32Array(262144, 3080192, 131090, 196650, 3080192, 131090)
 
+[node name="DañoLava" type="TileMap" parent="Pinchos" groups=["pinchos"]]
+visible = false
+scale = Vector2(1, 1)
+tile_set = SubResource("TileSet_cw2wt")
+format = 2
+layer_0/tile_data = PackedInt32Array(1572877, 131072, 2, 1572878, 131072, 2, 1572879, 131072, 2, 1572880, 131072, 2, 1572884, 131072, 2, 1572885, 131072, 2, 1572886, 131072, 2, 1572887, 131072, 2, 1572888, 131072, 2, 1572889, 131072, 2, 1572890, 131072, 2, 1572891, 131072, 2, 1572892, 131072, 2, 1572893, 131072, 2, 1572894, 131072, 2, 1572895, 131072, 2, 1572896, 131072, 2, 1376271, 131072, 2, 1376273, 131072, 2, 1441809, 131072, 2, 1376274, 131072, 2, 1441810, 131072, 2, 1376275, 131072, 2, 1441811, 131072, 2, 1376276, 131072, 2, 1441812, 131072, 2, 1507345, 131072, 2, 1572881, 131072, 2, 1507346, 131072, 2, 1572882, 131072, 2, 1507347, 131072, 2, 1572883, 131072, 2, 1507348, 131072, 2, 1441813, 131072, 2, 1507349, 131072, 2, 1376277, 131072, 2, 1376278, 131072, 2, 1441814, 131072, 2, 1507350, 131072, 2, 1441815, 131072, 2, 1507351, 131072, 2, 1441816, 131072, 2, 1507352, 131072, 2, 1441817, 131072, 2, 1507353, 131072, 2, 1441818, 131072, 2, 1507354, 131072, 2, 1245199, 131072, 2, 1310735, 131072, 2, 1441807, 131072, 2, 1507343, 131072, 2, 1245200, 131072, 2, 1310736, 131072, 2, 1376272, 131072, 2, 1441808, 131072, 2, 1507344, 131072, 2, 1245201, 131072, 2, 1310737, 131072, 2, 1245202, 131072, 2, 1310738, 131072, 2, 1245203, 131072, 2, 1310739, 131072, 2, 1245204, 131072, 2, 1310740, 131072, 2, 1245205, 131072, 2, 1310741, 131072, 2, 1245206, 131072, 2, 1310742, 131072, 2, 1245207, 131072, 2, 1310743, 131072, 2, 1376279, 131072, 2, 1245208, 131072, 2, 1310744, 131072, 2, 1376280, 131072, 2, 1245209, 131072, 2, 1310745, 131072, 2, 1376281, 131072, 2)
+layer_1/name = "Capa 2"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 2
+layer_1/tile_data = PackedInt32Array(262144, 1, 7, 262145, 3080192, 131090, 196610, 3080192, 131090, 196611, 3080192, 131090, 131076, 3080192, 131090, 131077, 3080192, 131090, 131078, 3080192, 131090, 131079, 3080192, 131090, 196616, 3080192, 131090, 196617, 3080192, 131090, 131082, 3080192, 131090, 131083, 3080192, 131090, 131084, 3080192, 131090, 131085, 3080192, 131090, 131086, 3080192, 131090, 196623, 327682, 2, 262161, 262146, 2, 327698, 262146, 2, 262160, 393218, 0, 262164, 262146, 2, 262165, 327682, 2, 196630, 262146, 2, 196631, 327682, 2, 1179662, 327681, 7, 1114125, 327681, 7, 1179678, 262145, 7, 1179677, 327681, 7, 131096, 3080192, 131090, 131097, 3080192, 131090, 131098, 3080192, 131090, 131099, 3080192, 131090, 196636, 3080192, 131090, 196637, 3080192, 131090, 196638, 3080192, 131090, 196639, 3080192, 131090, 131104, 3080192, 131090, 131105, 3080192, 131090, 131106, 3080192, 131090, 131107, 3080192, 131090, 131108, 3080192, 131090, 131109, 3080192, 131090, 131110, 3080192, 131090, 131111, 3080192, 131090, 196648, 3080192, 131090, 196649, 3080192, 131090, 1179674, 327681, 7)
+layer_2/name = "Capa 5"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 5
+layer_2/tile_data = PackedInt32Array(262144, 3080192, 131090, 196650, 3080192, 131090)
+
 [node name="Gravy" parent="." instance=ExtResource("5_ohl6t")]
 z_index = 1
 position = Vector2(26, 200)
@@ -6046,66 +6068,83 @@ position = Vector2(241, 134.5)
 scale = Vector2(0.251042, 0.224167)
 texture = ExtResource("5_a0ybv")
 
-[node name="GeodaDeGravitita" type="Sprite2D" parent="."]
-position = Vector2(98, 204)
-rotation = 0.153589
-scale = Vector2(0.817704, 1.20479)
+[node name="Geodas" type="Node2D" parent="."]
+position = Vector2(241, 134.5)
+scale = Vector2(0.251042, 0.224167)
+
+[node name="GeodaDeGravitita" type="Sprite2D" parent="Geodas"]
+position = Vector2(-569.626, 310.037)
+rotation = 0.171662
+scale = Vector2(3.26691, 5.36176)
+skew = -0.0342968
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita2" type="Sprite2D" parent="."]
-position = Vector2(339, 205)
-rotation = -0.459022
-scale = Vector2(0.827065, 1.00102)
+[node name="GeodaDeGravitita2" type="Sprite2D" parent="Geodas"]
+position = Vector2(390.373, 314.498)
+rotation = -0.505514
+scale = Vector2(3.37571, 4.37578)
+skew = 0.0899001
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita3" type="Sprite2D" parent="."]
-position = Vector2(403, 202)
-rotation = 0.7662
-scale = Vector2(0.47556, 0.56979)
+[node name="GeodaDeGravitita3" type="Sprite2D" parent="Geodas"]
+position = Vector2(645.31, 301.115)
+rotation = 0.822775
+scale = Vector2(2.00675, 2.41481)
+skew = -0.112905
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita4" type="Sprite2D" parent="."]
-position = Vector2(129, 39)
-rotation = -3.61807
-scale = Vector2(0.670441, 1.0088)
+[node name="GeodaDeGravitita4" type="Sprite2D" parent="Geodas"]
+position = Vector2(-446.141, -426.022)
+rotation = 2.61749
+scale = Vector2(2.74109, 4.40325)
+skew = 0.0922312
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita5" type="Sprite2D" parent="."]
-position = Vector2(314, 39)
-rotation = 3.63901
+[node name="GeodaDeGravitita5" type="Sprite2D" parent="Geodas"]
+position = Vector2(290.788, -426.022)
+rotation = -2.59528
+scale = Vector2(4.09703, 4.35683)
+skew = -0.0948789
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita6" type="Sprite2D" parent="."]
-position = Vector2(178, 123)
-rotation = -0.153589
-scale = Vector2(0.390625, 0.52)
+[node name="GeodaDeGravitita6" type="Sprite2D" parent="Geodas"]
+position = Vector2(-250.954, -51.301)
+rotation = -0.171662
+scale = Vector2(1.56064, 2.31419)
+skew = 0.0342968
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita7" type="Sprite2D" parent="."]
-position = Vector2(16, 106)
-rotation = 0.919789
+[node name="GeodaDeGravitita7" type="Sprite2D" parent="Geodas"]
+position = Vector2(-896.264, -127.137)
+rotation = 0.973454
+scale = Vector2(4.29177, 4.16513)
+skew = -0.108964
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita8" type="Sprite2D" parent="."]
-position = Vector2(467, 85)
-rotation = 3.831
-scale = Vector2(0.72649, 0.925428)
+[node name="GeodaDeGravitita8" type="Sprite2D" parent="Geodas"]
+position = Vector2(900.248, -220.818)
+rotation = -2.39612
+scale = Vector2(3.03905, 3.95544)
+skew = -0.110929
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita9" type="Sprite2D" parent="."]
-position = Vector2(108, 92)
-rotation = 2.75762
-scale = Vector2(0.445635, 0.457011)
+[node name="GeodaDeGravitita9" type="Sprite2D" parent="Geodas"]
+position = Vector2(-529.792, -189.591)
+rotation = 2.71669
+scale = Vector2(1.80652, 2.00951)
+skew = 0.078661
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita10" type="Sprite2D" parent="."]
-position = Vector2(325, 101)
-rotation = -2.96357
-scale = Vector2(0.404754, 0.43601)
+[node name="GeodaDeGravitita10" type="Sprite2D" parent="Geodas"]
+position = Vector2(334.605, -149.442)
+rotation = -2.94276
+scale = Vector2(1.61871, 1.93883)
+skew = -0.0395321
 texture = ExtResource("10_ejgkw")
 
-[node name="GeodaDeGravitita11" type="Sprite2D" parent="."]
-position = Vector2(409, 67)
-rotation = -2.45219
-scale = Vector2(0.481635, 0.58894)
+[node name="GeodaDeGravitita11" type="Sprite2D" parent="Geodas"]
+position = Vector2(669.211, -301.115)
+rotation = -2.39613
+scale = Vector2(2.01477, 2.51723)
+skew = -0.110929
 texture = ExtResource("10_ejgkw")
