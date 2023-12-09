@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ihxjjn84pe71"
-path="res://.godot/imported/Raíles.png-f6177cf7df9341afd741c99722b131c6.ctex"
+uid="uid://co2vb5bvyoy82"
+path="res://.godot/imported/Raíles al revés.png-3e95a0bedd261a6e642230d4ec7c0a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Vagoneta/Raíles.png"
-dest_files=["res://.godot/imported/Raíles.png-f6177cf7df9341afd741c99722b131c6.ctex"]
+source_file="res://assets/Vagoneta/Raíles al revés.png"
+dest_files=["res://.godot/imported/Raíles al revés.png-3e95a0bedd261a6e642230d4ec7c0a1e.ctex"]
 
 [params]
 

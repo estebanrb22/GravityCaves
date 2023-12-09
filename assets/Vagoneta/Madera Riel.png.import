@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ihxjjn84pe71"
-path="res://.godot/imported/Raíles.png-f6177cf7df9341afd741c99722b131c6.ctex"
+uid="uid://djt70ox0hxlcc"
+path="res://.godot/imported/Madera Riel.png-756ced2bf2f30883d838083b58847af4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Vagoneta/Raíles.png"
-dest_files=["res://.godot/imported/Raíles.png-f6177cf7df9341afd741c99722b131c6.ctex"]
+source_file="res://assets/Vagoneta/Madera Riel.png"
+dest_files=["res://.godot/imported/Madera Riel.png-756ced2bf2f30883d838083b58847af4.ctex"]
 
 [params]
 
