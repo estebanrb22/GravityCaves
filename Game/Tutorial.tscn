@@ -2286,7 +2286,6 @@ position = Vector2(27, 125)
 
 [node name="Menú de Pausa" parent="Gravy" instance=ExtResource("13_cx5ic")]
 process_mode = 3
-visible = false
 offset_left = -192.0
 offset_top = -108.0
 offset_right = -192.0
