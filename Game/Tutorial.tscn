@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bah1xl7upyprw"]
+[gd_scene load_steps=20 format=3 uid="uid://bah1xl7upyprw"]
 
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="1_aot3b"]
 [ext_resource type="Texture2D" uid="uid://cmfldudyj2lqw" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/sky.png" id="1_sbqcq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bxdt4vavexh4v" path="res://assets/Naturaleza/Árbol 2.png" id="10_hg27w"]
 [ext_resource type="Texture2D" uid="uid://ci8co8sgali5q" path="res://assets/Naturaleza/Árbol 4.png" id="11_u4ioc"]
 [ext_resource type="Texture2D" uid="uid://cpswi2w0r53i8" path="res://assets/Naturaleza/Oscuridad.png" id="12_tq3bj"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="13_cx5ic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_men2b"]
 texture = ExtResource("1_sbqcq")
@@ -2282,6 +2283,14 @@ scale = Vector2(0.4, 0.4)
 [node name="Gravy" parent="." instance=ExtResource("1_aot3b")]
 z_index = 6
 position = Vector2(27, 125)
+
+[node name="Menú de Pausa" parent="Gravy" instance=ExtResource("13_cx5ic")]
+process_mode = 3
+visible = false
+offset_left = -192.0
+offset_top = -108.0
+offset_right = -192.0
+offset_bottom = -108.0
 
 [node name="Camera2D2" type="Camera2D" parent="Gravy"]
 position = Vector2(-2, 2)

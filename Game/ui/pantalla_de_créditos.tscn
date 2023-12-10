@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfrg7a11k2n7f"]
+[gd_scene load_steps=5 format=3 uid="uid://dfrg7a11k2n7f"]
 
 [ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_kb3ob"]
+[ext_resource type="Script" path="res://Game/ui/pantalla_de_créditos.gd" id="1_obfnr"]
 [ext_resource type="Texture2D" uid="uid://dyb551g78q0jm" path="res://assets/Menú Créditos/Menú de Créditos Final.png" id="2_ybi4v"]
+[ext_resource type="Texture2D" uid="uid://2r5srhoalj36" path="res://assets/Menú Principal/Botón Volver.png" id="4_fmh21"]
 
 [node name="Pantalla de Créditos" type="MarginContainer"]
 offset_right = 1920.0
 offset_bottom = 1080.0
+script = ExtResource("1_obfnr")
 
 [node name="Fondo Menú de Créditos" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -14,16 +17,27 @@ texture = ExtResource("1_kb3ob")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(1560, 920)
+custom_minimum_size = Vector2(1248, 736)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_ybi4v")
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(402, 180)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+
+[node name="Botón de Volver" type="TextureButton" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("4_fmh21")

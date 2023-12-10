@@ -1,11 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpmga5q4jh2su"]
+[gd_scene load_steps=4 format=3 uid="uid://bpmga5q4jh2su"]
 
+[ext_resource type="Script" path="res://Game/ui/menú_de_opciones.gd" id="1_1ptfm"]
 [ext_resource type="Texture2D" uid="uid://c76w1lau7rv6h" path="res://assets/Cosas varias/Fondo/0.png" id="1_5tlij"]
+[ext_resource type="Texture2D" uid="uid://2r5srhoalj36" path="res://assets/Menú Principal/Botón Volver.png" id="2_02xrm"]
 
 [node name="Menú de Opciones" type="MarginContainer"]
 offset_right = 384.0
 offset_bottom = 216.0
+script = ExtResource("1_1ptfm")
 
 [node name="Fondo Menú de Opciones" type="Sprite2D" parent="."]
-position = Vector2(192, 108)
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
 texture = ExtResource("1_5tlij")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(402, 180)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 70
+
+[node name="Botón de Volver" type="TextureButton" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_02xrm")
+ignore_texture_size = true
