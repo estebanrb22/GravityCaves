@@ -34,7 +34,7 @@ var velocity_fall = 0
 
 var push = 50.0
 
-#b#
+#
 func _ready() -> void:
 	$Pivote.scale.y = 1
 	label_life.text = str(count_lives)
@@ -47,7 +47,8 @@ func _on_area_2d_body_entered(body):
 		take_damage()
 		
 func take_damage():
-	LevelManager.reset_level()
+	#LevelManager.reset_level()
+	LevelManager.go_to_level(6)
 		
 func _physics_process(delta):
 	
