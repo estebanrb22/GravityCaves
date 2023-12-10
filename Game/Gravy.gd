@@ -34,7 +34,7 @@ var velocity_fall = 0
 
 var push = 50.0
 
-
+#b#
 func _ready() -> void:
 	$Pivote.scale.y = 1
 	label_life.text = str(count_lives)
