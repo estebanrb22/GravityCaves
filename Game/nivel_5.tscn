@@ -6421,6 +6421,7 @@ position = Vector2(453, 32)
 scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" parent="." instance=ExtResource("3_rwmpn")]
+zoom = Vector2(4, 4)
 
 [node name="Borde" type="TileMap" parent="."]
 visible = false

@@ -3629,22 +3629,22 @@ texture = ExtResource("4_qv6h6")
 47:18/2/flip_v = true
 47:18/2/physics_layer_0/linear_velocity = Vector2(0, 0)
 47:18/2/physics_layer_0/angular_velocity = 0.0
-47:18/2/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 3.375, 3.75, -1.625, -4.375, -3.375, 8, -8, -8)
+47:18/2/physics_layer_0/polygon_0/points = PackedVector2Array(-6.875, -8, 6.625, -8, 3.75, 3.625, -0.375, -1.125, -3.5, 6.75)
 47:18/3 = 3
 47:18/3/flip_h = true
 47:18/3/transpose = true
 47:18/3/physics_layer_0/linear_velocity = Vector2(0, 0)
 47:18/3/physics_layer_0/angular_velocity = 0.0
-47:18/3/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 3.5, 3.5, -4.5, -1.75, 6.375, -3.75, -8, -8)
+47:18/3/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.875, -8, -6.625, 3.625, -3.75, -1.125, 0.375, 6.75, 3.5)
 47:18/4 = 4
 47:18/4/transpose = true
 47:18/4/physics_layer_0/linear_velocity = Vector2(0, 0)
 47:18/4/physics_layer_0/angular_velocity = 0.0
-47:18/4/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -6.5, -3.625, 4.5, -1.375, -2.75, 3.5, 8, 8)
+47:18/4/physics_layer_0/polygon_0/points = PackedVector2Array(8, -6.875, 8, 6.625, -3.625, 3.75, 1.125, -0.375, -6.75, -3.5)
 47:18/5 = 5
 47:18/5/physics_layer_0/linear_velocity = Vector2(0, 0)
 47:18/5/physics_layer_0/angular_velocity = 0.0
-47:18/5/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -3.625, -5.5, -1.625, 4.75, 3.5, -1.5, 8, 8)
+47:18/5/physics_layer_0/polygon_0/points = PackedVector2Array(-6.875, 8, 6.625, 8, 3.75, -3.625, -0.375, 1.125, -3.5, -6.75)
 48:18/next_alternative_id = 6
 48:18/0 = 0
 48:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -6450,6 +6450,7 @@ position = Vector2(30, 57)
 scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" parent="." instance=ExtResource("3_v7dn2")]
+zoom = Vector2(4, 4)
 
 [node name="Borde" type="TileMap" parent="."]
 visible = false
