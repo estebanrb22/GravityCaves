@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bhr3723rmcm03"]
+[gd_scene load_steps=14 format=3 uid="uid://bhr3723rmcm03"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_0qwsd"]
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_6nl2j"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_qv6h6"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_ml1xh"]
 [ext_resource type="PackedScene" uid="uid://dybq24pjv437y" path="res://Game/cajita.tscn" id="6_bh3px"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="7_oc0fv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7csm5"]
 texture = ExtResource("4_qv6h6")
@@ -6540,3 +6541,9 @@ position = Vector2(-134, -21)
 
 [node name="Gravy" parent="." instance=ExtResource("5_ml1xh")]
 position = Vector2(462, 23)
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("7_oc0fv")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)

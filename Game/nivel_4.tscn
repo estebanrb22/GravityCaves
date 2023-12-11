@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://kp2e7haxulaj"]
+[gd_scene load_steps=18 format=3 uid="uid://kp2e7haxulaj"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_0lf57"]
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_toun1"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Game/tilemap.gd" id="4_h6sda"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_0bun8"]
 [ext_resource type="Texture2D" uid="uid://dd2ysw7cdracy" path="res://assets/Gravitita/Gravitita.png" id="6_11l5g"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="7_1gw2d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q7fbh"]
 texture = ExtResource("4_c14hn")
@@ -3775,3 +3776,9 @@ scale = Vector2(0.4, 0.4)
 tile_set = SubResource("TileSet_boxc1")
 format = 2
 layer_0/tile_data = PackedInt32Array(131131, 0, 0, 196667, 0, 1, 131132, 65536, 0, 196668, 65536, 1, 655423, 0, 0, 720959, 0, 1, 655424, 65536, 0, 720960, 65536, 1, 196671, 0, 0, 262207, 0, 1, 196672, 65536, 0, 262208, 65536, 1, 2555906, 0, 0, 2621442, 0, 1, 2555907, 65536, 0, 2621443, 65536, 1, 2228226, 0, 0, 2293762, 0, 1, 2228227, 65536, 0, 2293763, 65536, 1, 2359301, 0, 0, 2424837, 0, 1, 2359302, 65536, 0, 2424838, 65536, 1, 2031623, 0, 0, 2097159, 0, 1, 2031624, 65536, 0, 2097160, 65536, 1, 2490423, 0, 0, 2555959, 0, 1, 2490424, 65536, 0, 2555960, 65536, 1, 2097205, 0, 0, 2162741, 0, 1, 2097206, 65536, 0, 2162742, 65536, 1, 2555956, 0, 0, 2621492, 0, 1, 2555957, 65536, 0, 2621493, 65536, 1, 1769502, 0, 0, 1835038, 0, 1, 1769503, 65536, 0, 1835039, 65536, 1)
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("7_1gw2d")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)

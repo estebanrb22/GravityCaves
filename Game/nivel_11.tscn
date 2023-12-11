@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ds2q323ml1w7b"]
+[gd_scene load_steps=19 format=3 uid="uid://ds2q323ml1w7b"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_rt6n8"]
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_l7jw7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://djt70ox0hxlcc" path="res://assets/Vagoneta/Madera Riel.png" id="6_dfmpe"]
 [ext_resource type="Texture2D" uid="uid://ihxjjn84pe71" path="res://assets/Vagoneta/Raíles.png" id="6_gc5y3"]
 [ext_resource type="Texture2D" uid="uid://co2vb5bvyoy82" path="res://assets/Vagoneta/Raíles al revés.png" id="9_nna7e"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="10_ggmbj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2r3dt"]
 texture = ExtResource("4_v7kl1")
@@ -5972,3 +5973,9 @@ layer_1/tile_data = PackedInt32Array(458769, 3080192, 196626, 65553, 3080192, 19
 
 [node name="Gravy" parent="." instance=ExtResource("6_43exb")]
 position = Vector2(56, 100)
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("10_ggmbj")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)

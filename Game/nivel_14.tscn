@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bvgd88u4amlsa"]
+[gd_scene load_steps=25 format=3 uid="uid://bvgd88u4amlsa"]
 
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="1_0t6mf"]
 [ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/camera_2d.tscn" id="2_nbsny"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="8_cwjch"]
 [ext_resource type="Texture2D" uid="uid://bj8fy58cj272a" path="res://assets/Texturas Nivel 15 + Boss (Nivel Final)/Lava Caves Background.jpg" id="9_n664b"]
 [ext_resource type="Texture2D" uid="uid://dkqiicfrqnq15" path="res://assets/Naturaleza/Geoda de Gravitita.png" id="10_47q5s"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="13_616ix"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sw058"]
 texture = ExtResource("3_y4jej")
@@ -6135,3 +6136,9 @@ rotation = 2.39613
 scale = Vector2(2.4418, 3.81142)
 skew = 0.110929
 texture = ExtResource("10_47q5s")
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("13_616ix")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)

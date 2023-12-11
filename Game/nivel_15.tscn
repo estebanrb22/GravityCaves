@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://61wjhsx1y56r"]
+[gd_scene load_steps=21 format=3 uid="uid://61wjhsx1y56r"]
 
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_rrwwm"]
 [ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/camera_2d.tscn" id="3_klrs4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ljkyf0s0b1y7" path="res://assets/Texturas Nivel 15 + Boss (Nivel Final)/Esquinas Bordes Lava Tile Set.png" id="6_217dy"]
 [ext_resource type="Texture2D" uid="uid://wt6kgbrjd3f8" path="res://assets/Texturas Nivel 15 + Boss (Nivel Final)/Pinchos de Lava al revés.png" id="7_q3sqa"]
 [ext_resource type="Texture2D" uid="uid://dkqiicfrqnq15" path="res://assets/Naturaleza/Geoda de Gravitita.png" id="10_ejgkw"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="11_8q5y1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sw058"]
 texture = ExtResource("3_ujbfp")
@@ -6147,3 +6148,9 @@ rotation = -2.39613
 scale = Vector2(2.01477, 2.51723)
 skew = -0.110929
 texture = ExtResource("10_ejgkw")
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("11_8q5y1")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://y10q0ujv7joi"]
+[gd_scene load_steps=17 format=3 uid="uid://y10q0ujv7joi"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_urj2x"]
 [ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_e6uvi"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dybq24pjv437y" path="res://Game/cajita.tscn" id="8_4l3tt"]
 [ext_resource type="Texture2D" uid="uid://b7ocilpc7qidw" path="res://assets/Naturaleza/cadenas.png" id="9_mdm4b"]
 [ext_resource type="Texture2D" uid="uid://cdb3rm8kv8qaw" path="res://assets/Naturaleza/Palanca.png" id="10_0tw70"]
+[ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="11_sb0t0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bdcwf"]
 texture = ExtResource("3_hfu8a")
@@ -5840,3 +5841,9 @@ rotation = 0.808087
 scale = Vector2(0.381461, 0.378979)
 skew = 0.287354
 texture = ExtResource("7_vmiib")
+
+[node name="Menú de Pausa" parent="." instance=ExtResource("11_sb0t0")]
+process_mode = 3
+offset_right = 0.0
+offset_bottom = 0.0
+scale = Vector2(1.255, 1.297)
