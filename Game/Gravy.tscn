@@ -1,8 +1,7 @@
-[gd_scene load_steps=54 format=3 uid="uid://cyw07i8371itd"]
+[gd_scene load_steps=53 format=3 uid="uid://cyw07i8371itd"]
 
 [ext_resource type="Script" path="res://Game/Gravy.gd" id="1_t0hxk"]
 [ext_resource type="Texture2D" uid="uid://qrf3j0gjto42" path="res://assets/Characters/New Gravy Sheet.png" id="2_h8nka"]
-[ext_resource type="PackedScene" uid="uid://b0idljs505y5f" path="res://Game/hud.tscn" id="3_5nt1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0k534"]
 size = Vector2(10, 15)
@@ -356,9 +355,5 @@ zoom = Vector2(5, 5)
 position = Vector2(0, 0.5)
 scale = Vector2(1.05, 1.05)
 shape = SubResource("RectangleShape2D_8jk3d")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("3_5nt1f")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

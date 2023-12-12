@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgr28p6gybt0g"]
+
+[ext_resource type="Script" path="res://cajitav2RB.gd" id="1_48i7e"]
+[ext_resource type="Texture2D" uid="uid://buvja0ru87yib" path="res://assets/Cajita asset/Cajita.png" id="3_4hwtu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ls0"]
+size = Vector2(35, 35)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+lock_rotation = true
+freeze_mode = 1
+script = ExtResource("1_48i7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_4hwtu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_h5ls0")

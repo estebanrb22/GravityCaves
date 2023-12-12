@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd86l4flp3iox"]
+
+[ext_resource type="Script" path="res://Game/palanca.gd" id="1_hf8ic"]
+[ext_resource type="Texture2D" uid="uid://cofi8nddj0v2a" path="res://assets/Naturaleza/palanca_v2.png" id="2_lp36v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd4fk"]
+size = Vector2(22, 18)
+
+[node name="Palanca" type="Area2D"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_hf8ic")
+
+[node name="pixel_art" type="Sprite2D" parent="."]
+position = Vector2(0, -8.5)
+texture = ExtResource("2_lp36v")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_cd4fk")

@@ -13,10 +13,11 @@ func go_to_level(index):
 			get_tree().change_scene_to_packed(level)
 	
 func start_game():
-	go_to_level(0)
+	go_to_level(5)
 
 func next_level():
-	go_to_level(current_level + 1)
+	#go_to_level(current_level + 1)
+	go_to_level(5)
 	
 func reset_level():
 	go_to_level(current_level)

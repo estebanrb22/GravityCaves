@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name GravyClass
 
 @onready var label_life: Label = $CanvasLayer/HUD/Label
 @onready var pivote: Node2D = $Pivote
@@ -37,10 +38,10 @@ var push = 50.0
 
 func _ready() -> void:
 	$Pivote.scale.y = 1
-	label_life.text = str(count_lives)
 	posx = position.x
 	posy = position.y
 	animation_tree.active = true
+	
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("pinchos"):
@@ -48,6 +49,7 @@ func _on_area_2d_body_entered(body):
 		
 func take_damage():
 	LevelManager.reset_level()
+
 		
 func _physics_process(delta):
 	

@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://bhr3723rmcm03"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_0qwsd"]
-[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_6nl2j"]
+[ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="2_6nl2j"]
 [ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/camera_2d.tscn" id="3_v7dn2"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_qv6h6"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_ml1xh"]
-[ext_resource type="PackedScene" uid="uid://dybq24pjv437y" path="res://Game/cajita.tscn" id="6_bh3px"]
+[ext_resource type="PackedScene" uid="uid://fm1jjcyox38c" path="res://Game/minicajita.tscn" id="5_myjpf"]
 [ext_resource type="PackedScene" uid="uid://cetrl5ebwm887" path="res://Game/ui/menú_de_pausa.tscn" id="7_oc0fv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7csm5"]
@@ -6522,28 +6522,33 @@ layer_0/tile_data = PackedInt32Array(0, 3997696, 18, 65536, 3997696, 19, 131072,
 [node name="Cajas" type="Node2D" parent="."]
 position = Vector2(235, 67)
 
-[node name="Cajita" parent="Cajas" instance=ExtResource("6_bh3px")]
+[node name="caja3" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(-132, 55)
 
-[node name="Cajita2" parent="Cajas" instance=ExtResource("6_bh3px")]
-position = Vector2(0, -22)
+[node name="caja2" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(3, -11)
 
-[node name="Cajita3" parent="Cajas" instance=ExtResource("6_bh3px")]
-position = Vector2(-134, 45)
+[node name="caja" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(3, 9)
 
-[node name="Cajita4" parent="Cajas" instance=ExtResource("6_bh3px")]
-position = Vector2(-134, 23)
+[node name="caja4" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(-132, 36)
 
-[node name="Cajita5" parent="Cajas" instance=ExtResource("6_bh3px")]
-position = Vector2(-134, 1)
+[node name="caja5" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(-132, 17)
 
-[node name="Cajita6" parent="Cajas" instance=ExtResource("6_bh3px")]
-position = Vector2(-134, -21)
+[node name="caja6" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(-132, -2)
+
+[node name="caja7" parent="Cajas" instance=ExtResource("5_myjpf")]
+position = Vector2(-132, -21)
 
 [node name="Gravy" parent="." instance=ExtResource("5_ml1xh")]
 position = Vector2(462, 23)
 
 [node name="Menú de Pausa" parent="." instance=ExtResource("7_oc0fv")]
 process_mode = 3
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(1.255, 1.297)

@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7viiy0hweiax"]
+
+[ext_resource type="Script" path="res://Game/caja.gd" id="1_20vnp"]
+[ext_resource type="Texture2D" uid="uid://5t3fv4u2v66v" path="res://assets/Cajita asset/Cajas.png" id="1_al0t7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hdgl"]
+size = Vector2(17.9286, 15.7143)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oplm"]
+size = Vector2(17.1429, 13.2143)
+
+[node name="caja" type="CharacterBody2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_20vnp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, -21)
+texture = ExtResource("1_al0t7")
+hframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -11.4286)
+polygon = PackedVector2Array(-23, 11, -23, 9, -5.71429, 9.57143, -5.71429, -7.57143, -23, -7, -23, -10, -5.71429, -10.4286, -5.71429, -30.4286, -23, -31, -23, -34, 22, -34, 22, -31, 2.85714, -30.4286, 2.85714, -10.4286, 22, -10, 22, -7, 2.85714, -7.57143, 2.85714, 9.57143, 22, 9, 22, 11)
+
+[node name="collision_hitbox" type="Area2D" parent="."]
+position = Vector2(0, -11)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="collision_hitbox"]
+position = Vector2(13.6429, -21.1428)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8hdgl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="collision_hitbox"]
+position = Vector2(14.2857, 1)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_5oplm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision_hitbox"]
+position = Vector2(-15.2, 1)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_5oplm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="collision_hitbox"]
+position = Vector2(-15, -20.429)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8hdgl")
