@@ -13,8 +13,6 @@ var is_active = true
 @onready var floor_ray_cast = $RayCastFloor
 @onready var wall_ray_cast = $RayCastWall
 @onready var hitbox = $HitBox
-	
-var palancas: Array[Palanca] = []
 
 func _ready():
 	hitbox.body_entered.connect(_gravy_entered)
@@ -25,6 +23,9 @@ func _gravy_entered(body: CharacterBody2D):
 		body.position.x = position.x
 		body.position.y = position.y - 8
 		just_teleport = true
+		
+func set_movement(accept: bool):
+	is_active = accept
 	
 func _gravy_exited(body: CharacterBody2D):
 	just_teleport = false

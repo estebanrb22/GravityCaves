@@ -36,6 +36,7 @@ func sign(num: int):
 	else: return 1
 	
 func _physics_process(delta):
+		
 	count += 1
 	if count == 120: set_connections()
 	

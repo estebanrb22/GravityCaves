@@ -5844,6 +5844,7 @@ texture = ExtResource("7_1api4")
 
 [node name="Menú de Pausa" parent="." instance=ExtResource("11_uml4g")]
 process_mode = 3
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(1.255, 1.297)

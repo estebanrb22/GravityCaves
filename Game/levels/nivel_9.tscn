@@ -6542,7 +6542,6 @@ scale = Vector2(0.263542, 0.280556)
 texture = ExtResource("2_0jp2l")
 
 [node name="Puertita" parent="." instance=ExtResource("2_ptmnc")]
-visible = false
 position = Vector2(249, 196)
 scale = Vector2(0.3, 0.3)
 
@@ -6591,7 +6590,6 @@ modulate = Color(0.737255, 0.737255, 0.737255, 0.662745)
 scale = Vector2(0.2, 0.2)
 
 [node name="Borde" type="TileMap" parent="Node2D"]
-visible = false
 scale = Vector2(3.5, 3.5)
 tile_set = SubResource("TileSet_wguee")
 format = 2

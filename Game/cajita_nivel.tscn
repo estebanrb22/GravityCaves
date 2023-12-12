@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dwhtnb0xyaq1y" path="res://Game/vagoneta.tscn" id="7_gxl1o"]
 [ext_resource type="PackedScene" uid="uid://c7viiy0hweiax" path="res://Game/caja.tscn" id="8_f0lxy"]
 [ext_resource type="PackedScene" uid="uid://dmaqq2wov4frb" path="res://Game/cajitav3.tscn" id="9_2l0qx"]
-[ext_resource type="PackedScene" path="res://cajitav2RB.tscn" id="11_qib61"]
+[ext_resource type="PackedScene" uid="uid://dybq24pjv437y" path="res://Game/cajita.tscn" id="11_qib61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7csm5"]
 texture = ExtResource("4_dm1dr")
@@ -2743,7 +2743,7 @@ sources/1 = SubResource("TileSetAtlasSource_7csm5")
 script = ExtResource("1_im1lv")
 
 [node name="caja2" parent="." instance=ExtResource("2_typok")]
-position = Vector2(285, 103)
+position = Vector2(431, 85)
 
 [node name="Puertita" parent="." instance=ExtResource("2_oj2l4")]
 position = Vector2(455, 175)
@@ -2775,10 +2775,23 @@ position = Vector2(146, 202)
 position = Vector2(296, 235)
 
 [node name="caja" parent="." instance=ExtResource("8_f0lxy")]
-position = Vector2(357, 111)
+position = Vector2(430, 65)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("9_2l0qx")]
-position = Vector2(143, 57)
+position = Vector2(431, 29)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("11_qib61")]
-position = Vector2(434, 78)
+position = Vector2(431, 99)
+
+[node name="Vagoneta3" parent="." instance=ExtResource("7_gxl1o")]
+position = Vector2(200, 102)
+
+[node name="Vagoneta4" parent="." instance=ExtResource("7_gxl1o")]
+position = Vector2(278, 91)
+
+[node name="Palanca3" parent="." instance=ExtResource("7_fifmo")]
+position = Vector2(84, 112)
+
+[node name="Palanca4" parent="." instance=ExtResource("7_fifmo")]
+position = Vector2(143, 11)
+rotation = 3.14159

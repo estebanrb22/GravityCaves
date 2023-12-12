@@ -5689,6 +5689,7 @@ layer_0/tile_data = PackedInt32Array(1114117, 0, 0, 1179653, 0, 1, 1114118, 6553
 
 [node name="Menú de Pausa" parent="." instance=ExtResource("8_kew02")]
 process_mode = 3
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(1.255, 1.297)
