@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://Game/cajita_nivel.gd" id="1_im1lv"]
 [ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="2_oj2l4"]
 [ext_resource type="PackedScene" uid="uid://fm1jjcyox38c" path="res://Game/minicajita.tscn" id="2_typok"]
-[ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/camera_2d.tscn" id="3_hb62h"]
+[ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/levels/camera_2d.tscn" id="3_hb62h"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_dm1dr"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_hq8du"]
 [ext_resource type="PackedScene" uid="uid://cd86l4flp3iox" path="res://Game/palanca.tscn" id="7_fifmo"]
 [ext_resource type="PackedScene" uid="uid://dwhtnb0xyaq1y" path="res://Game/vagoneta.tscn" id="7_gxl1o"]
 [ext_resource type="PackedScene" uid="uid://c7viiy0hweiax" path="res://Game/caja.tscn" id="8_f0lxy"]
 [ext_resource type="PackedScene" uid="uid://dmaqq2wov4frb" path="res://Game/cajitav3.tscn" id="9_2l0qx"]
-[ext_resource type="PackedScene" uid="uid://dgr28p6gybt0g" path="res://cajitav2RB.tscn" id="11_qib61"]
+[ext_resource type="PackedScene" path="res://cajitav2RB.tscn" id="11_qib61"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7csm5"]
 texture = ExtResource("4_dm1dr")

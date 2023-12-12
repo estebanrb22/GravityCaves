@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://kp2e7haxulaj"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_0lf57"]
-[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_toun1"]
+[ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="2_toun1"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_c14hn"]
 [ext_resource type="Script" path="res://Game/tilemap.gd" id="4_h6sda"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_0bun8"]
@@ -3779,6 +3779,7 @@ layer_0/tile_data = PackedInt32Array(131131, 0, 0, 196667, 0, 1, 131132, 65536, 
 
 [node name="Menú de Pausa" parent="." instance=ExtResource("7_1gw2d")]
 process_mode = 3
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(1.255, 1.297)

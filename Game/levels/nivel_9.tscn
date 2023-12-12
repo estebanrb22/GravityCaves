@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://cyvykvbvkowqp"]
 
 [ext_resource type="Texture2D" uid="uid://b8aofk66gr17m" path="res://assets/Cosas varias/fondobonito.png" id="2_0jp2l"]
-[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_ptmnc"]
-[ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/camera_2d.tscn" id="3_w301d"]
+[ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="2_ptmnc"]
+[ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/levels/camera_2d.tscn" id="3_w301d"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_2d50y"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_4ihf5"]
 [ext_resource type="Texture2D" uid="uid://b0rejqfrwy613" path="res://assets/Cosas varias/luz.png" id="7_1g3ri"]
@@ -6647,6 +6647,7 @@ texture = ExtResource("7_1g3ri")
 
 [node name="Menú de Pausa" parent="." instance=ExtResource("10_cce42")]
 process_mode = 3
+visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 scale = Vector2(1.255, 1.297)
