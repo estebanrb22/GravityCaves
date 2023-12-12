@@ -49,8 +49,10 @@ func _on_area_2d_body_entered(body):
 		
 func take_damage():
 	LevelManager.reset_level()
+	
+func get_gravity_changed():
+	return is_gravity_changed
 
-		
 func _physics_process(delta):
 	
 	var move_input = Input.get_axis("move_left", "move_right")
