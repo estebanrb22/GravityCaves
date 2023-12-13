@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cd86l4flp3iox"]
 
 [ext_resource type="Script" path="res://Game/palanca.gd" id="1_hf8ic"]
-[ext_resource type="Texture2D" uid="uid://cofi8nddj0v2a" path="res://assets/Naturaleza/palanca_v2.png" id="2_lp36v"]
+[ext_resource type="Texture2D" uid="uid://b0x5qik8kmwfp" path="res://assets/Naturaleza/palancav2.png" id="2_51dbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd4fk"]
 size = Vector2(22, 18)
@@ -13,8 +13,8 @@ collision_mask = 2
 script = ExtResource("1_hf8ic")
 
 [node name="pixel_art" type="Sprite2D" parent="."]
-position = Vector2(0, -8.5)
-texture = ExtResource("2_lp36v")
+position = Vector2(0, -9.5)
+texture = ExtResource("2_51dbe")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
