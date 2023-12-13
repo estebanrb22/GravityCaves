@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_ol585"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="2_wnsgp"]
-[ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="3_o0qht"]
+[ext_resource type="PackedScene" uid="uid://cw3wd7e1rvrut" path="res://Game/puertita.tscn" id="3_o0qht"]
 [ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/levels/camera_2d.tscn" id="5_jhmhc"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="6_lxhwy"]
 [ext_resource type="Texture2D" uid="uid://dd2ysw7cdracy" path="res://assets/Gravitita/Gravitita.png" id="6_t55jb"]
@@ -6547,12 +6547,12 @@ sources/0 = SubResource("TileSetAtlasSource_viynj")
 
 [node name="Background1" parent="." instance=ExtResource("1_ol585")]
 
-[node name="Area2D" parent="." instance=ExtResource("3_o0qht")]
-position = Vector2(450, 172)
-scale = Vector2(0.4, 0.4)
-
 [node name="Camera2D" parent="." instance=ExtResource("5_jhmhc")]
 zoom = Vector2(4, 4)
+
+[node name="Puertita" parent="." instance=ExtResource("3_o0qht")]
+position = Vector2(441, 170)
+scale = Vector2(0.4, 0.4)
 
 [node name="Gravy" parent="." instance=ExtResource("2_wnsgp")]
 position = Vector2(33, 135)

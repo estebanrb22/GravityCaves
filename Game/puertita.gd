@@ -1,7 +1,7 @@
 extends Area2D
 
 @onready var label: Label = $Label
-var inside: Array[CharacterBody2D] = []
+var inside: Array[GravyClass] = []
 
 func _ready():
 	label.hide()
@@ -22,16 +22,3 @@ func _input(event):
 	if event.is_action_pressed("puertas"):
 		for body in inside:
 			LevelManager.next_level()
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

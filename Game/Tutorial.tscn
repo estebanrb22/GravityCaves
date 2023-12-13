@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="1_aot3b"]
 [ext_resource type="Texture2D" uid="uid://cmfldudyj2lqw" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/sky.png" id="1_sbqcq"]
 [ext_resource type="Texture2D" uid="uid://b1lnc0lluj56f" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/tileset.png" id="2_0nxln"]
-[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_obory"]
+[ext_resource type="PackedScene" uid="uid://cw3wd7e1rvrut" path="res://Game/puertita.tscn" id="2_obory"]
 [ext_resource type="Texture2D" uid="uid://b0syltu46gwba" path="res://assets/Cosas varias/Magic-Cliffs-Gamekit/Environment/PNG/clouds.png" id="2_wpchr"]
 [ext_resource type="Texture2D" uid="uid://bseuiegiun1h4" path="res://assets/Naturaleza/Sol.png" id="6_g0mdv"]
 [ext_resource type="Texture2D" uid="uid://dw0qmrsgl44dc" path="res://assets/Naturaleza/Arbusto Pixel Art.png" id="7_w1p7o"]
