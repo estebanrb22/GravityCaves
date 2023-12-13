@@ -3,7 +3,7 @@ extends Area2D
 class_name Palanca
 
 var gravy_in = false
-@onready var pixel_art = $pixel_art
+@onready var pixel_art = $Sprite2D
 @onready var hitbox = $"."
 
 var vagonetas: Array[Vagon] = []

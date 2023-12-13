@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cofi8nddj0v2a"
-path="res://.godot/imported/palanca_v2.png-bbe6c0daafbdf58bf05680fe0499155b.ctex"
+uid="uid://dgk62fy1r1jkb"
+path="res://.godot/imported/palancav2.png-f73bf888b617f15ab77eadb121d74691.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Naturaleza/palanca_v2.png"
-dest_files=["res://.godot/imported/palanca_v2.png-bbe6c0daafbdf58bf05680fe0499155b.ctex"]
+source_file="res://assets/Naturaleza/palancav2.png"
+dest_files=["res://.godot/imported/palancav2.png-f73bf888b617f15ab77eadb121d74691.ctex"]
 
 [params]
 

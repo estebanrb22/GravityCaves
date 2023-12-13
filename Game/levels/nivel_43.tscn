@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bubgw0n4s6klo"]
 
 [ext_resource type="PackedScene" uid="uid://ccxiw7qpffke" path="res://Game/background_1.tscn" id="1_vw30k"]
-[ext_resource type="PackedScene" path="res://Game/puertita.tscn" id="2_3ccps"]
+[ext_resource type="PackedScene" uid="uid://bla32pffeqplq" path="res://Game/puertita.tscn" id="2_3ccps"]
 [ext_resource type="PackedScene" uid="uid://ibv78ehuadlc" path="res://Game/levels/camera_2d.tscn" id="3_vrc85"]
 [ext_resource type="Texture2D" uid="uid://c8qh46h006bba" path="res://assets/Cosas varias/Fantasy Caves/mainlev_build.png" id="4_xoev3"]
 [ext_resource type="PackedScene" uid="uid://cyw07i8371itd" path="res://Game/Gravy.tscn" id="5_5ihr7"]
