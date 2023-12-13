@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwhtnb0xyaq1y"]
+[gd_scene load_steps=4 format=3 uid="uid://7fnp4gsxbpn2"]
 
-[ext_resource type="Script" path="res://Game/vagoneta.gd" id="1_aflfg"]
-[ext_resource type="Texture2D" uid="uid://dp2h7fvmlhjkl" path="res://assets/Vagoneta/vagonetas.png" id="2_y4cwr"]
+[ext_resource type="Script" path="res://Game/vagoneta_inverted.gd" id="1_denjl"]
+[ext_resource type="Texture2D" uid="uid://dp2h7fvmlhjkl" path="res://assets/Vagoneta/vagonetas.png" id="2_46r40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82ns3"]
 size = Vector2(18, 11)
 
 [node name="Vagoneta" type="CharacterBody2D"]
 collision_mask = 9
-script = ExtResource("1_aflfg")
+script = ExtResource("1_denjl")
 
 [node name="RayCastFloor" type="RayCast2D" parent="."]
-position = Vector2(10, -1)
+position = Vector2(10, 1)
+rotation = 3.14159
 scale = Vector2(0.3, 0.3)
 target_position = Vector2(0, 20)
 collision_mask = 9
@@ -24,17 +25,21 @@ target_position = Vector2(0, -20)
 collision_mask = 9
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 3.14159
 polygon = PackedVector2Array(-8, -3, -8, 4, 8, 4, 8, -3, 6, -3, 6, 2, -6, 2, -6, -3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_y4cwr")
+rotation = 3.14159
+texture = ExtResource("2_46r40")
 vframes = 2
 frame = 1
 
 [node name="HitBox" type="Area2D" parent="."]
+rotation = 3.14159
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -0.5)
+rotation = 3.14159
 shape = SubResource("RectangleShape2D_82ns3")

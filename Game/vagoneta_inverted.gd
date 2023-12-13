@@ -1,15 +1,14 @@
 extends Vagon
 
-class_name Vagoneta
+class_name Vagoneta_Inverted
 
-var gravity = 400
+var gravity = -400
 var speed = 90
 var acceleration = 10**3
 var direction = 1
 var move = 1
 var just_teleport = false
 var accept_gravy = true
-var intercalate = 1
 
 
 @onready var floor_ray_cast = $RayCastFloor
@@ -26,7 +25,7 @@ func _ready():
 func _gravy_entered(body: CharacterBody2D):
 	if not just_teleport and accept_gravy:
 		body.position.x = position.x
-		body.position.y = position.y - 8
+		body.position.y = position.y + 8
 		just_teleport = true
 		
 func set_movement(accept: bool):
@@ -49,14 +48,14 @@ func change_direction():
 	wall_ray_cast.rotation *= -1
 	
 func set_gravity_changed(is_gravity_changed: bool):
-	accept_gravy = not is_gravity_changed
+	accept_gravy = is_gravity_changed
 	
 func _physics_process(delta): 
 		
-	if not is_on_floor():
+	if not is_on_ceiling():
 		velocity.y += gravity * delta
 		
-	if is_on_floor():
+	if is_on_ceiling():
 		if not floor_ray_cast.is_colliding() or wall_ray_cast.is_colliding():
 			change_direction()
 			

@@ -6,7 +6,7 @@ var gravy_in = false
 @onready var pixel_art = $pixel_art
 @onready var hitbox = $"."
 
-var vagonetas: Array[Vagoneta] = []
+var vagonetas: Array[Vagon] = []
 
 func _ready():
 	hitbox.body_entered.connect(_gravy_entered)
@@ -20,7 +20,7 @@ func _gravy_exited(body: CharacterBody2D):
 	if gravy_in:
 		gravy_in = false
 		
-func set_vagonetas(new_vagonetas: Array[Vagoneta]): 
+func set_vagonetas(new_vagonetas: Array[Vagon]): 
 	for v in new_vagonetas:
 		vagonetas.append(v)
 

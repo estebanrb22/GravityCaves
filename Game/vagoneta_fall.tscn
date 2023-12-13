@@ -1,20 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwhtnb0xyaq1y"]
+[gd_scene load_steps=4 format=3 uid="uid://coj2ptgdpb1yi"]
 
-[ext_resource type="Script" path="res://Game/vagoneta.gd" id="1_aflfg"]
-[ext_resource type="Texture2D" uid="uid://dp2h7fvmlhjkl" path="res://assets/Vagoneta/vagonetas.png" id="2_y4cwr"]
+[ext_resource type="Script" path="res://Game/vagoneta_fall.gd" id="1_k2qek"]
+[ext_resource type="Texture2D" uid="uid://dp2h7fvmlhjkl" path="res://assets/Vagoneta/vagonetas.png" id="2_2d0qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82ns3"]
 size = Vector2(18, 11)
 
 [node name="Vagoneta" type="CharacterBody2D"]
 collision_mask = 9
-script = ExtResource("1_aflfg")
-
-[node name="RayCastFloor" type="RayCast2D" parent="."]
-position = Vector2(10, -1)
-scale = Vector2(0.3, 0.3)
-target_position = Vector2(0, 20)
-collision_mask = 9
+script = ExtResource("1_k2qek")
 
 [node name="RayCastWall" type="RayCast2D" parent="."]
 position = Vector2(7, 0)
@@ -27,7 +21,7 @@ collision_mask = 9
 polygon = PackedVector2Array(-8, -3, -8, 4, 8, 4, 8, -3, 6, -3, 6, 2, -6, 2, -6, -3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_y4cwr")
+texture = ExtResource("2_2d0qk")
 vframes = 2
 frame = 1
 

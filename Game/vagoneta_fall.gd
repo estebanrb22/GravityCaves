@@ -1,6 +1,6 @@
 extends Vagon
 
-class_name Vagoneta
+class_name Vagoneta_Fall
 
 var gravity = 400
 var speed = 90
@@ -12,7 +12,6 @@ var accept_gravy = true
 var intercalate = 1
 
 
-@onready var floor_ray_cast = $RayCastFloor
 @onready var wall_ray_cast = $RayCastWall
 @onready var hitbox = $HitBox
 @onready var pixel_art = $Sprite2D
@@ -44,7 +43,6 @@ func to_the_left():
 	
 func change_direction():
 	direction *= -1
-	floor_ray_cast.position.x *= -1
 	wall_ray_cast.position.x *= -1
 	wall_ray_cast.rotation *= -1
 	
@@ -56,8 +54,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 		
-	if is_on_floor():
-		if not floor_ray_cast.is_colliding() or wall_ray_cast.is_colliding():
+	if wall_ray_cast.is_colliding():
 			change_direction()
 			
 	if is_active: 
@@ -70,3 +67,4 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, direction * speed * move, acceleration * delta)
 	
 	move_and_slide()
+
