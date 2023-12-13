@@ -31,6 +31,12 @@ func _gravy_entered(body: CharacterBody2D):
 func set_movement(accept: bool):
 	is_active = accept
 	
+func move_wall_ray_cast(distance: int):
+	wall_ray_cast.position.x += distance
+	
+func move_wall_ray_cast(distance: int):
+	wall_ray_cast.position.x += distance
+	
 func _gravy_exited(body: CharacterBody2D):
 	just_teleport = false
 

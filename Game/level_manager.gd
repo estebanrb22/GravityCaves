@@ -17,7 +17,7 @@ func start_game():
 
 func next_level():
 	#go_to_level(current_level + 1)
-	go_to_level(15)
+	go_to_level(19)
 	
 func reset_level():
 	go_to_level(current_level)

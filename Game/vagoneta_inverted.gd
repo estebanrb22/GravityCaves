@@ -25,11 +25,17 @@ func _ready():
 func _gravy_entered(body: CharacterBody2D):
 	if not just_teleport and accept_gravy:
 		body.position.x = position.x
-		body.position.y = position.y + 8
+		body.position.y = position.y + 7
 		just_teleport = true
 		
 func set_movement(accept: bool):
 	is_active = accept
+	
+func get_just_teleport():
+	return just_teleport
+
+func move_wall_ray_cast(distance: int):
+	wall_ray_cast.position.x += distance
 	
 func _gravy_exited(body: CharacterBody2D):
 	just_teleport = false

@@ -32,6 +32,7 @@ var jump_interval = 0
 var gravity_changes = 0
 var gravity_just_changed = false
 var velocity_fall = 0
+var can_jump = true
 
 var push = 50.0
 
@@ -52,6 +53,9 @@ func take_damage():
 	
 func get_gravity_changed():
 	return is_gravity_changed
+	
+func set_can_jump(accept: bool):
+	can_jump = accept
 
 func _physics_process(delta):
 	
@@ -137,7 +141,7 @@ func _physics_process(delta):
 			
 	#gravy is on the air and jump, this makes its special jump 
 	if not is_on_floor() and not is_on_ceiling() and jump_count <= 2 and gravity_changes == 0:
-		if just_jump:
+		if just_jump and can_jump:
 			gravity_just_changed = true
 			$Pivote.scale.y *= -1
 			playback.travel("bolita")

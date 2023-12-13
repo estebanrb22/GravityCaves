@@ -24,7 +24,7 @@ func _ready():
 func _gravy_entered(body: CharacterBody2D):
 	if not just_teleport and accept_gravy:
 		body.position.x = position.x
-		body.position.y = position.y + 8
+		body.position.y = position.y + 7
 		just_teleport = true
 		
 func set_movement(accept: bool):
